@@ -1,1 +1,73 @@
+*{font-size: 15px;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+	font-family: '微软雅黑'
+}
+body{
+		background: url('image/bar1.png');
+}
+body>div:first-child{
+	width: 78%;
+	margin: 0 auto;
+	height: 50px;
+}
+body>div:first-child>a:first-child{
+	line-height: 50px;
+	color: #f60;
+	padding-bottom: 3px;
+	border-radius: 30%;
+}
+body>div:first-child>a:first-child:hover{
+	border-top: 5px;
+	border-bottom: 1px solid #f60;
+}
+div.main{
+	width: 78%;
+	overflow: hidden;
+	margin: 10px auto;
+	border: 1px solid red;
+}
+div.main>div{
+	background: #fffcef;
+	width: 39%;
+	border: 1px solid #ffecd0;
+	margin-bottom: 30px;
+}
+div.main>div>p{
+padding: 10px 25px 10px 25px;
+}
+div.main>div>h2{
+	text-align: center;
+}
+div.main>div:nth-child(even){
+	margin-left: 61%;
+	height: 200px;
+}
 
+@media only screen and (max-width:1366px ) {
+	div.main{
+		width: 100%;
+	}
+	div.main>div{
+		width: 50%;
+	}
+	div.main>div:nth-child(even){
+		margin-left: 50%;
+	}
+}
+
+@media only screen and (max-width:850px ) {
+	body>div:first-child{
+	width:100%;
+	}
+	div.main{
+		width: 100%;
+	}
+	div.main>div{
+		width: 100%;
+	}
+	div.main>div:nth-child(even){
+		margin-left: 0%;
+	}
+}
