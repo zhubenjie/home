@@ -5,7 +5,7 @@
 	font-family: '微软雅黑'
 }
 body{
-		background: url('image/bar1.png');
+		background: url('../image/bar1.png');
 }
 body>div:first-child{
 	width: 78%;
