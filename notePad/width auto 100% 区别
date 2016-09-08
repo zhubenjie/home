@@ -1,0 +1,41 @@
+http://www.xuebuyuan.com/1523333.html
+width:auto和width:100%的区别（css学习）
+
+<div>
+    <p>1</p>
+
+</div>
+
+div{
+width:600px;
+
+overflow:auto;
+}
+p{
+        width:100%;
+        padding:10px;
+}
+
+p{
+        width:auto;
+        padding:10px;
+}
+
+如果是width:100%，则说明p的width会得到600px就已经充满div区域，然后自己又有padding，所以会出现滚动条。
+
+而width:auto则比较聪明，它是总体宽度（广义，包括width，margin,padding,border这些）等于父级宽度（狭义，内容区，仅指width），所以如果padding已经左右占去20px的空间，那么width给的值就是580px。
+
+所以，如果：
+
+p{
+            width:auto;
+            background-color: red;
+            margin:10px;
+            padding:10px;
+ }
+
+其实最后实际的width值为560px。
+
+但无论是width:100%还是auto，其计算的参照都是父级内容区width值，而非总宽度值。。
+
+width默认 auto
