@@ -1,0 +1,18 @@
+var roll=document.getElementById('roll'), 
+initX=0, 
+initY, 
+compY, 
+sp=15, 
+//可调整时间间隔，步进值不宜过大，不然IE下有点闪屏； 
+timeGap=5, 
+doc=document.documentElement, 
+docBody=document.body; 
+compY=initY=10; 
+roll.style.right=initX+"px"; 
+;(function(){ 
+var curScrollTop=(doc.scrollTop||docBody.scrollTop||0)-(doc.clientTop||docBody.clientTop||0); 
+//每次comP的值都不一样；直到roll.style.top===doc.scrollTop+initY； 
+compY+=(curScrollTop+initY-compY)/sp; 
+roll.style.top=Math.ceil(compY)+"px"; 
+setTimeout(arguments.callee,timeGap); 
+})();
