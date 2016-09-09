@@ -16,3 +16,5 @@ compY+=(curScrollTop+initY-compY)/sp;
 roll.style.top=Math.ceil(compY)+"px"; 
 setTimeout(arguments.callee,timeGap); 
 })();
+
+#roll{ position:absolute;} 
