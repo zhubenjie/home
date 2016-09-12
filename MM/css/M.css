@@ -1,0 +1,172 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	font-family: 'Microsoft YaHei';
+	text-decoration: none;list-style: none;
+}
+html{
+	overflow-x: hidden;
+	/*background: url('../image/a1.png');
+*/
+	background-attachment:fixed;
+}
+body{
+	/*background: url('../image/a2.png');*/
+	/*background: url('../image/bar1.png');*/
+	background-attachment:fixed;
+}
+.head1,.head2{
+	height: 100px;
+	background: white;
+	border-bottom: 1px solid #cacaca;
+}
+.head2{
+	border-bottom: none;
+	height: 70px;position: relative;z-index: 3;
+}
+.head1200{
+	width: 1200px;margin: 0 auto;
+	font-size: 15px;
+
+}
+.head1200 img{
+	display: inline-block;
+	height: 60px;
+	width: 500px;
+	background: #f60;
+	margin-top: 20px;
+}
+.head1200 div{
+	float: right;
+	margin-top: 20px;
+	font-size: 18px;
+	font-weight: bold;
+}
+.head1200 div span{
+	color: #f60;
+	line-height: 45px;
+}
+.head1200>ul{
+	padding-bottom: 1px;
+	
+}
+
+.head1200>ul>li{
+	float: left;text-align: center;
+	width: 120px;height: 60px;
+	margin-top: 10px;
+	position: relative;
+	margin-right: 12px;
+}
+.head1200>ul>li>a{
+	color: black;font-size: 20px;
+	font-weight: bold;height: 60px;
+}
+.head1200>ul>li:hover>a{
+	color: red;
+}
+.head1200>ul>li:hover>a>small{
+color: black
+}
+.head1200>ul>li>a>small{
+	color: #cacaca;font-size: 15px;
+	font-weight: normal;
+}
+.head1200>ul>li>dl{
+	position: absolute;top: 60px;width: 120px;
+	background: #cacaca;
+	/*再也不搞rgba 了   IE8不支持 害我找了好久*/
+	background: rgba(122,122,122,0.7);
+}
+.head1200>ul>li>dl>dd{
+	height: 0px;
+	line-height: 30px;
+	overflow: hidden;
+	transition: all 0.5s;
+	-webkit-transition:all 0.5s;
+}
+/*.head1200>ul>li:hover >dl{
+	box-shadow: 0px 0px 20px blue;
+	transition: all 0.3s;
+}*/
+
+
+.head1200>ul>li>dl>dd:hover{
+	background: #f60;
+	background: rgba(0,0,255,0.3);
+}
+.head1200>ul>li>dl>dd>a{
+	color: white;
+}
+.head1200>ul>li:hover>dl>dd{
+	height: 30px;
+}
+
+
+
+.banner{
+	height: 460px;
+	margin: 0 auto;
+	position: relative;
+}
+.banner>ul{
+	position: absolute;left: 77%;
+	bottom: 5%;
+	background: rgba(255,255,255,0.3);
+	padding: 3px 0px;
+	padding-right: 9px;border-radius: 10px;
+	z-index: 5;
+}
+.banner>ul>li{
+	width: 12px;height: 12px;background:#B7B7B7;
+	border-radius: 50%;float: left;margin-left: 9px;cursor:pointer;
+}
+.banner>ul>li:hover{
+	background: #F60;
+}
+.banner>ul>li.bar{
+	background: #f60;
+}
+.banner{
+	position: relative;
+	height: 500px;
+	/*background: url('../image/2.png') center;*/
+}
+.banner>a>img{
+	position: absolute;left: 50%;
+	margin-left: -960px;
+	display: none;
+}
+
+.banner>a>img.z{
+	display: block;
+}
+.title{
+	/*background: white;*/
+	font-size: 30px;text-align: center;
+	padding: 30px 0px;
+}
+.bannerImg {
+    width: 1220px;
+   overflow: hidden;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+
+}
+.bannerImg li {
+	float: left;
+	background: black;
+}
+.bannerImg li img{
+	  border: 0;transition: all 0.7s;
+	  display: block;
+}
+em{
+	font-style: normal;color: red;
+}
+
+.bannerImg li img.opa{
+	opacity: 0.6;
+}
