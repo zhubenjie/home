@@ -1,0 +1,21 @@
+
+http://www.daqianduan.com/3737.html
+这是个nth-child用法  （好东西）
+<br/>
+http://www.haorooms.com/post/sublime_use
+<br/>
+sublime  插件 安装 使用 还不错//主要是防火墙 和 ipv6导致有时候搞不好
+<br/>
+emmet 是sublime的插件 zencode <br/>
+http://www.iteye.com/news/27580  
+用法 简介
+<br>
+http://www.cnblogs.com/tylerdonet/p/3520862.html
+ajax 详细用法
+<br>
+http://jingyan.baidu.com/article/6fb756eca5306a241958fb6f.html
+<br>
+IE调试工具
+<br>
+http://www.moton.com.cn/article/index/id/9.html
+解决IE8及以下不支持CSS

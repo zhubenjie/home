@@ -1,0 +1,8 @@
+jpg 不显示？
+在IE 里面 CSS里面接 背景图  tmd 用jpg 不管用 要png
+
+图片有边框？
+border none
+
+背景不透明？
+-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=40)"; 

@@ -1,0 +1,70 @@
+JS代码判断IE6,IE7,IE8,IE9！
+JS代码判断IE6,IE7,IE8,IE9！2011年12月15日 星期四 14:01做网页有时候会用到JS检测IE的版本，下面是检测Microsoft Internet Explorer版本的三种代码！ 
+有一种代码：
+
+<script type="text/javascript"> 
+var browser=navigator.appName 
+var b_version=navigator.appVersion 
+var version=b_version.split(";"); 
+var trim_Version=version[1].replace(/[ ]/g,""); 
+if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE6.0") 
+{ 
+alert("IE 6.0"); 
+} 
+else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE7.0") 
+{ 
+alert("IE 7.0"); 
+} 
+else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") 
+{ 
+alert("IE 8.0"); 
+} 
+else if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE9.0") 
+{ 
+alert("IE 9.0"); 
+} 
+</script>
+
+第二种：
+
+<script type="text/javascript"> 
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE6.0") 
+{ 
+alert("IE 6.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE7.0") 
+{ 
+alert("IE 7.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE8.0") 
+{ 
+alert("IE 8.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion .split(";")[1].replace(/[ ]/g,"")=="MSIE9.0") 
+{ 
+alert("IE 9.0"); 
+} 
+</script>
+
+第三种：
+
+<script type="text/javascript"> 
+if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7.") 
+{ 
+alert("IE 7.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.") 
+{ 
+alert("IE 8.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9.") 
+{ 
+alert("IE 9.0"); 
+} 
+else if(navigator.appName == "Microsoft Internet Explorer") 
+{ 
+alert("IE 6.0"); 
+} 
+</script>
+
+http://www.cnblogs.com/binaryworms/articles/2320503.html

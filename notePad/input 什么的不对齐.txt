@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style>	
+	*{
+	float:left;
+	margin: 0px;
+	}
+		.w{
+			line-height: 34px;
+			height: 24px;
+		}
+		.q{
+			width: 79px;
+			height: 30px;
+			font-size: 16px;border: none;
+			background: red;
+		font-size: 50px;
+		}
+
+	</style>
+</head>
+<body>
+
+
+		这个兼容所有浏览器，
+		要点！ float left  不设置 这个 会发生
+				1，submit 字体大  text 改变位置
+				2，text高度 会随着line-height改变
+		注意：submit boder：none 要设置
+
+<input type="text" class='w'><input type="submit" class="q" value="搜索">
+</body>
+</html>

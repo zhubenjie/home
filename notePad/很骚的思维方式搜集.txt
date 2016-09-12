@@ -1,0 +1,26 @@
+1，
+(按住 鼠标拖动，类似什么划线 mousemove  up down)
+问?
+拖动旋转的时候，怎么控制只有在点击画布的时候，才能拖动旋转画布，而不是点击任何位置都会拖动旋转
+
+var move=0;
+$（"＃画布"）.mousedown（function（）{move=1}）;
+$（document）.mousemove（function（）{
+  if（move）{
+  ……
+}
+}）.mouseup（function（）{
+move=0;
+}）;
+例子
+var move
+		$(window).mousedown(function(){
+			move=1
+			$(window).mousemove(function(){
+				if(move==1){
+					console.log('x')}
+				})
+			$(window).mouseup(function(){
+				move=0
+			})
+		})
