@@ -1,0 +1,29 @@
+
+====================================================================
+英语单词
+requestAnimationFrame 这个方法代替setInterval
+renderer 渲染器
+render 渲染
+camera 相机
+cube 方块
+plane 平面
+spotlight 聚光灯源
+sphere 球体
+geometry 几何体
+mesh 网格
+material 材质
+MeshBasicMaterial：对光照无感，给几何体一种简单的颜色或显示线框
+MeshLambertMaterial：这种材质对光照有反应，用于创建暗淡的不发光的物体
+MeshPhongMaterial：这种材质对光照也有反应，用于创建金属类明亮的物体
+fog 雾化  》1
+
+
+
+到目前为止 和场景相关的函数
+Scene.add()  添加
+Scene.remove  删除
+Scene.children() 获取场景的子对象列表
+Scene.getChildByName()  利用name属性，获取场景中某个特定的物体
+
+1，雾化===================================
+scene.fog=new THREE.Fog('#cacaca',0.5,70)
