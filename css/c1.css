@@ -4,7 +4,9 @@
 	text-decoration: none;
 	font-family: '微软雅黑'
 }
+
 body{
+	 font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 		background: url('../image/bar1.png');
 }
 body>div:first-child{
