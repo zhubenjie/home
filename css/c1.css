@@ -23,6 +23,7 @@ body>div:first-child>a:first-child{
 }
 body>div:first-child>a{
 	color:#666;
+	margin-right:12px;
 }
 body>div:first-child>a:first-child:hover{
 	border-top: 5px;
