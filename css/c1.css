@@ -21,6 +21,9 @@ body>div:first-child>a:first-child{
 	padding-bottom: 3px;
 	border-radius: 30%;
 }
+body>div:first-child>a{
+	color:#666;
+}
 body>div:first-child>a:first-child:hover{
 	border-top: 5px;
 	border-bottom: 1px solid #f60;
