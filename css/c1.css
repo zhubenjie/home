@@ -29,6 +29,8 @@ div.main{
 
 }
 div.main>div{
+	padding:12px;
+	padding-right:none;
 	background: #fffcef;
 	width: 39%;
 	border: 1px solid #ffecd0;
@@ -43,6 +45,8 @@ div.main>div>h2{
 }
 div.main>div:nth-child(even){
 	margin-left: 61%;
+		padding:12px;
+	padding-right:none;
 
 }
 
