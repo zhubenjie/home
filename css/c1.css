@@ -3,10 +3,11 @@
 	margin: 0px;
 	text-decoration: none;
 	font-family: '微软雅黑'
+	 font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 }
 
 body{
-	 font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+	
 		background: url('../image/bar1.png');
 }
 body>div:first-child{
