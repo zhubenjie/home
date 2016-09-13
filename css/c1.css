@@ -43,7 +43,7 @@ div.main>div>h2{
 }
 div.main>div:nth-child(even){
 	margin-left: 61%;
-	height: 200px;
+
 }
 
 @media only screen and (max-width:1366px ) {
