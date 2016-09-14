@@ -87,6 +87,44 @@
 	
 	<div> a里面 包个img  a 的高度却比 img 高  解决办法 img{vertical-align} </div>
 	<div>  github字体推荐   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;</div>
+	<div><h2>关于  THREE.js </h2>
+requestAnimationFrame 这个方法代替setInterval
+3要素
+renderer 渲染器
+camera 相机
+scene 场景
+===============================================
+geometry 几何体 
+        cube 方块（1,1,1）
+        plane 平面（1,1）
+        geometry 几何体
+        sphere 球体（radius，X,X）
+===============================================
+var x=new THREE.Mesh(geometry,Material)
+mesh 网格
+material 材质
+MeshBasicMaterial：对光照无感，给几何体一种简单的颜色或显示线框
+MeshLambertMaterial：这种材质对光照有反应，用于创建暗淡的不发光的物体
+MeshPhongMaterial：这种材质对光照也有反应，用于创建金属类明亮的物体
+
+===================================================================
+光
+SpotLight 聚光灯源-具有锥形效果的光源
+AmbientLight-影响整个场景的光源
+PointLight-照射所有方向的光源
+DirectionalLight-模拟远处类似太阳的光源
+
+fog 雾化  》1
+
+到目前为止 和场景相关的函数
+Scene.add()  添加
+Scene.remove  删除
+Scene.children() 获取场景的子对象列表
+Scene.getChildByName()  利用name属性，获取场景中某个特定的物体
+
+1，雾化===================================
+scene.fog=new THREE.Fog('#cacaca',0.5,70)
+	</div>
 
 </div>
 
