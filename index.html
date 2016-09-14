@@ -87,6 +87,26 @@
 	
 	<div> a里面 包个img  a 的高度却比 img 高  解决办法 img{vertical-align} </div>
 	<div>  github字体推荐   font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;</div>
+	
+	<div><h2>jQuery键盘事件</h2>
+1、keydown()
+keydown 事件会在键盘按下时触发。<br>
+2、keypress()
+keypress 事件会在敲击按键时触发，我们可以理解为按下并抬起同一个按键。<br>
+3、keyup()
+keyup 事件会在按键释放时触发，也就是你按下键盘起来后的事件。<br>
+二、获得键盘上对应的 ascII 码：$(document).keydown(function (event) {
+    alert(event.keyCode);
+});
+ 
+
+	</div>
+	
+	
+	
+	
+	
+	
 	<div><h2>关于  THREE.js </h2>
 requestAnimationFrame 这个方法代替setInterval
 3要素
