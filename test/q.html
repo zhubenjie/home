@@ -13,12 +13,10 @@
 			border-radius: 50%;
 			background: green;
 			transition: all 0.5;
-			animation:qq 2s infinite;
+			/*animation:qq 2s infinite;*/
 		}
-		div:hover{
-			background: red;
-		}
-		@keyframes qq{
+	
+		/*@keyframes qq{
 			10%{
 				width: 100px;height: 100px;
 			}
@@ -31,11 +29,17 @@
 			100%{
 				width: 129px;height: 129px;
 			}
-		}
+		}*/
 	</style>
 </head>
 <body>
-<div></div>
+<div id="id">www</div>
+<script type="text/javascript">
+	var obj = document.getElementById('id');
 
+	obj.addEventListener('ontouchstart', function(event) {
+ 			obj.style.background='#f60'	
+}, false);
+</script>
 </body>
 </html>
