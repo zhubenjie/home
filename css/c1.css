@@ -5,7 +5,9 @@
 	font-family: '微软雅黑';
 	 
 }
-
+a{
+	color:#666;
+}
 body{
 	
 		background: url('../image/bar1.png');
