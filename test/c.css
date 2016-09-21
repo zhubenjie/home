@@ -1,0 +1,8 @@
+		div{
+			color: green
+		}
+		@media screen and (max-width: 990px){
+			div{
+				color: red;
+			}
+		}
