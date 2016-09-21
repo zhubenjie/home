@@ -1,4 +1,5 @@
 /* Respond.js: min/max-width media query polyfill. (c) Scott Jehl. MIT Lic. j.mp/respondjs  */
+/*让ie8 兼容 @media 的*/
 (function( w ){
 
 	"use strict";
