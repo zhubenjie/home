@@ -189,11 +189,35 @@ function show(){
     renderer.render(scene,camera)
 }
 	</pre>
-	
-
-	
 </div>
 
+<div><h2>关于AJAX</h2>
+	<pre>
+		 &lt;script type="text/javascript">
+function getDoc(){
+    var xmlhttp;
+    if(window.xmlhttpRequest){
+        xmlhttp=new XMLHttpRequest();
+    }
+    else{
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");//for IE6
+    }
+    xmlhttp.onreadystatechange = function(){
+        if(xmlhttp.readyState==4&&xmlhttp.status==200){
+            document.getElementById("￼myId").innerHTML=xmlhttp.responseText;
+        }
+    }
+    xmlhttp.open("￼GET", index.php,true);
+    xmlhttp.send();
+}
+ &lt;/script>
+</head>
+<body>
+    <button type="button" onclick="getDoc()">请求数据</button>
+</body>
+		
+	</pre>
+</div>
 
 
 </div>
