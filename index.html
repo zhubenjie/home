@@ -171,6 +171,29 @@ vertices顶点
 	导入respond.js 这个最好放在css后， 重点 ！ 要放在服务器上
 </div>
 
+<div>
+	<h2>关于THREE.js相机控件</h2>
+	<p>Trackball Controls 轨迹球控件</p>
+	<p>最常用的控件，你可以用鼠标（或轨迹球）来轻松的移动、平移、缩放场景</p>
+	<p>导入： http://www.zhubenjie.top/js/TrackballControls.js </p>
+	<pre>
+var  trackballControls  =  new  THREE.TrackballControls(camera);
+trackballContro ls . rotateSpeed  =  1.0;
+trackballControls.zo omSpeed  =  1  O;
+trackballControls.panS peed  =  1  O;
+var clock=new THREE.Clock()
+function show(){
+    var delta=clock.getDelta()
+    tra.update(delta)
+    requestAnimationFrame(show)
+    renderer.render(scene,camera)
+}
+	</pre>
+	
+
+	
+</div>
+
 
 
 </div>
