@@ -40,7 +40,16 @@ Scene.getChildByName()  利用name属性，获取场景中某个特定的物体
 scene.fog=new THREE.Fog('#cacaca',0.5,70)
 
 ===================================
-var helper = new THREE.GridHelper( 1000, 50 );
+var helper = new THREE.GridHelper( 1000, 50 );    边长1000  每个小格子是50
     helper.setColors( 0x0000ff, 0x808080 );
     scene.add( helper );
     这个是绘制网格 ，要注意 它和 X轴是水平的 所以 camera 的Y 要调到上面
+    
+ ====================定义点==================
+ THREE.Vector3 = function ( x, y, z ) {
+
+this.x = x || 0;
+this.y = y || 0;
+this.z = z || 0;
+
+};
