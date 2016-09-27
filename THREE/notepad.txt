@@ -53,7 +53,13 @@ this.y = y || 0;
 this.z = z || 0;
 
 };
-
+====================关于 renderer==============
+renderer=new THREE.render({antialias : true})
+antialias : true  这个抗锯齿
+要注意 
+renderer.setSize(x,y)
+renderer.setClearColor(0xffff00,0.5)//后面是透明度
+        
 
 =====================关于 基本材质===================
 http://www.ituring.com.cn/article/51315
