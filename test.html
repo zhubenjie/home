@@ -17,7 +17,7 @@
 	
 			var wiW=window.innerWidth
 			var wiH=window.innerHeight
-			var renderer,camera,scene;
+			var renderer,camera,scene,cube;
 
 			init()
 			animate()
@@ -39,7 +39,7 @@
 
 			var geo=new THREE.SphereGeometry(10,30,30)
 			var material=new THREE.MeshBasicMaterial({map:texture})
-			var cube=new THREE.Mesh(geo,material)
+			 cube=new THREE.Mesh(geo,material)
 			scene.add(cube)
 			
 			window.addEventListener('resize',function(){
