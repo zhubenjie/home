@@ -1,18 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>无标题文档</title>
+	<meta charset="utf-8">
+	<title>DEMO</title>
+	<script type="text/javascript" src='js/three81.js'></script>
+	<style>
+		*{
+			margin: 0;
+			overflow: hidden;
+		}
+	</style>
 </head>
-<div>q</div>
-<button>www</button>
-<script src='js/jquery-1.9.1.js'></script>
-<script>
-	$('button').click(function(){
-	$('div').text('xxx')
-		})
-
-</script>
 <body>
+<script type="text/javascript">
+		
+	
+			var wiW=window.innerWidth
+			var wiH=window.innerHeight
+			var renderer,camera,scene;
+
+			init()
+			animate()
+			//这些地方的先后顺序 很重要
+		function init(){
+			
+
+			 scene=new THREE.Scene()
+
+
+			 camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,5000)
+			camera.position.z=30;
+			 renderer=new THREE.WebGLRenderer({antialias:true});
+			renderer.setSize(wiW,wiH)
+			renderer.setClearColor('#cacaca')
+			document.body.appendChild(renderer.domElement)
+			
+			var texture=new THREE.TextureLoader().load('image/moon.jpg')
+
+			var geo=new THREE.SphereGeometry(10,30,30)
+			var material=new THREE.MeshBasicMaterial({map:texture})
+			var cube=new THREE.Mesh(geo,material)
+			scene.add(cube)
+			
+			window.addEventListener('resize',function(){
+					 wiW=window.innerWidth
+					 wiH=window.innerHeight
+					 renderer.setSize(wiW,wiH)
+					 camera.aspect=wiW/wiH
+					 	camera.updateProjectionMatrix();
+			})
+			
+			}
+
+			function animate(){
+			renderer.render(scene,camera)
+			cube.rotation.x+=0.002
+			requestAnimationFrame(animate)
+			}
+		
+	
+</script>
 </body>
 </html>
