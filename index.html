@@ -282,6 +282,17 @@ function getDoc(){
 	<div><h2>关于图片居中 左右两侧调类似颜色</h2>
 	    background: url(xxx) no-repeat center red
 	</div>
+	
+	<div>
+		<h2>js 关于元素 与页面的距离</h2>
+		Element.onmousemove=function(event){
+		event.clientX 相对浏览器
+		event.pageX相对屏幕 （浏览器缩小，鼠标移到外面会有负数）
+		 一般元素可能在任意地方 要得到里面鼠标的坐标 所以还要减去与周边的距离
+		event.clientX-element.offsetLeft   offsetTop
+		}
+		
+	</div>
 
 
 </div>
