@@ -13,9 +13,11 @@
     <link rel="stylesheet" type="text/css" href="css/c1.css">
 	<style>
 	.flagImg{
-	position:absolute;
-		top:36px;
-		left:5px;
+	position:fixed;
+		bottom:160px;
+		right:160px;
+		display:none;
+		cursor:url('image/z2.cur');
 		}
 	</style>
 </head>
@@ -330,6 +332,16 @@ function getDoc(){
 	 if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") {
 	 $('div.main>div:nth-child(even)').css({marginLeft:'55%'})
 	 }
+	$('flagImg').click(function{
+		$(window).animate({'scrollTop':'0'})},function(){
+	$(this).hide(300)
+	})
+	window.scroll=function(){
+		if(window.scrollTop()>200px){
+		$('flagImg').show(500)
+		
+		}
+	}
 	</script>
 	 <script src='http://www.zhubenjie.top/js/respond.js'></script>
 </body>
