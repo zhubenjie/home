@@ -330,19 +330,8 @@ function getDoc(){
 	var version=b_version.split(";"); 
 	var trim_Version=version[1].replace(/[ ]/g,""); 
 	 if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") {
-	 $('div.main>div:nth-child(even)').css({marginLeft:'55%'})
-	 }
-	$('.flagImg').click(function(){
-		$(window).animate({'scrollTop':'0'})},
-			    function(){$(this).hide(300)})
-	window.scroll=function(){
-		console.log('x')
-		if(window.scrollTop()>'200px'){
-		$('.flagImg').show(500)
-		console.log('y')
+
 		
-		}
-	}
 	</script>
 	 <script src='http://www.zhubenjie.top/js/respond.js'></script>
 </body>
