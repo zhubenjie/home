@@ -14,8 +14,8 @@
 	<style>
 	.flagImg{
 	position:fixed;
-		bottom:160px;
-		right:160px;
+		bottom:120px;
+		right:100px;
 		display:none;
 		cursor:url('image/z2.cur');
 		}
@@ -336,8 +336,10 @@ function getDoc(){
 		$(window).animate({'scrollTop':'0'})},
 			    function(){$(this).hide(300)})
 	window.scroll=function(){
+		console.log('x')
 		if(window.scrollTop()>'200px'){
-		$('flagImg').show(500)
+		$('.flagImg').show(500)
+		console.log('y')
 		
 		}
 	}
