@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>DEMO</title>
+	<script type="text/javascript" src='../js/three81.js'></script>
+	<script src='../js/TrackballControls.js'></script>
+	<style>
+		*{
+			margin: 0;
+		}
+
+	</style>
+</head>
+<body onload=bodyLoad()>
+<script type="text/javascript">
+
+var renderer,camera,scene,geometry,material,cube,controls
+var wiW=window.innerWidth,wiH=window.innerHeight
+	
+	function init(){
+	  renderer=new THREE.WebGLRenderer()
+	  renderer.setSize(wiW,wiH)
+	  renderer.setClearColor('#cacaca')
+	  document.body.appendChild(renderer.domElement)
+
+	  scene=new THREE.Scene()
+
+	  camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,10000)
+	  camera.position.z=800
+
+	  var t=new THREE.TextureLoader().load('../image/mm.jpg')
+	  t.needsUpdate=true 
+
+	  material=[]
+	  material.push(
+	  	new THREE.MeshNormalMaterial({}),
+	  	new THREE.MeshLambertMaterial({color:'red'}),
+	  	new THREE.MeshBasicMaterial({color:'green',wireframe:true}),
+	  	new THREE.PointsMaterial({size:2,transparent:true,map:t})
+	  	)
+	
+	}
+
+
+	function cube(){
+	geometry=new THREE.Geometry()
+   con=new THREE.TrackballControls(camera)
+	for (var i = 0; i <= 10000; i++) {
+		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
+			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
+		}
+	cube=new THREE.Points(geometry,material[3])
+	scene.add(cube)
+
+	}
+
+	function animate(){
+
+		con.update()
+
+		renderer.render(scene,camera)
+		requestAnimationFrame(animate)
+	}
+	function bodyLoad(){
+		init()
+		cube()
+		animate()
+		mCanvas()
+	}
+
+	function mCanvas(){
+		var canvas=document.createElement('canvas')
+		canvas.width=32
+		canvas.height=32
+		var c=canvas.getContext('2d')
+		document.body.appendChild(canvas)
+		// c.arc(36,36,35,0,20)
+		// c.fillStyle='green'
+		// c.fill()
+		c.font="50px Georgia";
+		c.shadowBlur=20;
+		c.shadowColor="black";
+		c.fillStyle='green'
+		c.backgroundAlpha=1
+		c.fillText("hello",10,30)
+	
+		return canvas;
+	}
+
+	function texture(){
+		var map=mCanvas()
+		var texture=new THREE.Texture(map)
+		return texture
+	}
+
+
+</script>
+</body>
+</html>
