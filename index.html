@@ -2,7 +2,7 @@
 
 <html>
 <head>
-	<link rel="shortcut icon" href="image/jiege.ico">
+	<link rel="shortcut icon" href="image/favicon.ico">
 	<meta http-equiv="Window-target" content="_top">
 	<!--我也不知道这是个什么-->
 	<meta name="Keywords" content="朱本杰 前端工程师 笔记 前端笔记 笔记本 朱本杰笔记本" >
@@ -332,10 +332,9 @@ function getDoc(){
 	 if(browser=="Microsoft Internet Explorer" && trim_Version=="MSIE8.0") {
 	 $('div.main>div:nth-child(even)').css({marginLeft:'55%'})
 	 }
-	$('.flagImg').click(function{
-		$(window).animate({'scrollTop':'0'})},function(){
-	$(this).hide(300)
-	})
+	$('.flagImg').click(function(){
+		$(window).animate({'scrollTop':'0'})},
+			    function(){$(this).hide(300)})
 	window.scroll=function(){
 		if(window.scrollTop()>200px){
 		$('flagImg').show(500)
