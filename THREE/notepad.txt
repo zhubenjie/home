@@ -66,8 +66,18 @@ map：使用纹理贴图，详见4.5节
 var texture=new THREE.Texture(canvas)
 cube=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({map:texture,transparent:true，opacity:0.5}))
 
+三个地方要设置
+texture.needsUpdate=true       transparent(透明的）：true    depthWrite:fals
+
 重点！
 texture.needsUpdate=true       transparent(透明的）：true   
-第一个不设置 没效果 出不来          第二个不设置canvas 背景（黑色）全部渲染上去了 ，要让他没有渲染到的地方透明，
-                                 简单的讲 只要画的地方
+ 第一个不设置 没效果 出不来         定义此材质是否是透明的。这对渲染效果有影响，因为透明物体需要特殊的处理，并在所有非透明物体之后被渲染。 对于该                                   行为的一个实际例子，请查看 WebGLRenderer 代码。
+                                当设置为true时，该材料的透明度由 opacity 属性所确定。
+                                缺省是 false.
+
+depthWrite:false (简单的讲， 前后重叠的时候，有时候会看到纹理的黑色背景  设置成false 后就好了)
+渲染此材质是否对深度缓冲区有什么影响。缺省为 true.
+当绘制二维叠加图层时，可以禁用深度写入， 
+http://techbrood.com/threejs/docs/#参考手册/材料(Materials)/材料(Material)
+材料链接
 
