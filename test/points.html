@@ -8,11 +8,18 @@
 	<style>
 		*{
 			margin: 0;
+		}	
+		#loadDiv,html,body{
+		width:100%;
+		height:100%;
 		}
-
+		#loadDiv{
+			background:green;
+		}
 	</style>
 </head>
 <body onload=bodyLoad()>
+	<div id='loadDiv'></div>
 <script type="text/javascript">
 
 var renderer,camera,scene,geometry,material,cube,controls
@@ -30,27 +37,15 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 	  camera.position.z=300
 
 	  var t=new THREE.TextureLoader().load('../img/x1.jpg')
-	  var t1=new THREE.TextureLoader().load('../img/x2.jpg')
-	  var t2=new THREE.TextureLoader().load('../img/y1.jpg')
-	  var t3=new THREE.TextureLoader().load('../img/y2.jpg')
-	  var t4=new THREE.TextureLoader().load('../img/z1.jpg')
-	  var t5=new THREE.TextureLoader().load('../img/z2.jpg')
+	
 	  t.needsUpdate=true 
-	   t1.needsUpdate=true
-	    t2.needsUpdate=true
-	     t3.needsUpdate=true
-	      t4.needsUpdate=true
-	       t5.needsUpdate=true
+	 
 	        con=new THREE.TrackballControls(camera)
 
 	  material=[]
 	  material.push(
-	  new THREE.MeshFaceMaterial({map:t}),
-	  new THREE.MeshFaceMaterial({map:t1}),
-	  new THREE.MeshFaceMaterial({map:t2}),
-	  new THREE.MeshFaceMaterial({map:t3}),
-	  new THREE.MeshFaceMaterial({map:t4}),
-	  new THREE.MeshFaceMaterial({map:t5})
+	  new THREE.MeshBasicMaterial({map:t}),
+	  
 	  	)
 	
 	}
@@ -76,6 +71,8 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 		requestAnimationFrame(animate)
 	}
 	function bodyLoad(){
+		var c=docuemnt.getElementById('loadDiv')
+		c.style.css('display','none')
 		init()
 		cube()
 		animate()
