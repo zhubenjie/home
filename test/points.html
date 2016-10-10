@@ -21,7 +21,7 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 	function init(){
 	  renderer=new THREE.WebGLRenderer()
 	  renderer.setSize(wiW,wiH)
-	  renderer.setClearColor('#cacaca')
+	  renderer.setClearColor('black')
 	  document.body.appendChild(renderer.domElement)
 
 	  scene=new THREE.Scene()
@@ -63,7 +63,7 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 // 		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
 // 			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
 // 		}
-	cube=new THREE.Mesh(geometry,material)
+	cube=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:'red'}))
 	scene.add(cube)
 
 	}
