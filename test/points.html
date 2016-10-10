@@ -27,30 +27,43 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 	  scene=new THREE.Scene()
 
 	  camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,10000)
-	  camera.position.z=800
+	  camera.position.z=300
 
-	  var t=new THREE.TextureLoader().load('../image/yun.png')
+	  var t=new THREE.TextureLoader().load('../img/x1.jpg')
+	  var t1=new THREE.TextureLoader().load('../img/x2.jpg')
+	  var t2=new THREE.TextureLoader().load('../img/y1.jpg')
+	  var t3=new THREE.TextureLoader().load('../img/y2.jpg')
+	  var t4=new THREE.TextureLoader().load('../img/z1.jpg')
+	  var t5=new THREE.TextureLoader().load('../img/z2.jpg')
 	  t.needsUpdate=true 
+	   t1.needsUpdate=true
+	    t2.needsUpdate=true
+	     t3.needsUpdate=true
+	      t4.needsUpdate=true
+	       t5.needsUpdate=true
+	      
 
 	  material=[]
 	  material.push(
-	  	new THREE.MeshNormalMaterial({}),
-	  	new THREE.MeshLambertMaterial({color:'red'}),
-	  	new THREE.MeshBasicMaterial({color:'green',wireframe:true}),
-	  	new THREE.PointsMaterial({size:2,transparent:true,map:t})
+	  new THREE.MeshFaceMaterial({map:t})
+	  new THREE.MeshFaceMaterial({map:t1})
+	  new THREE.MeshFaceMaterial({map:t2})
+	  new THREE.MeshFaceMaterial({map:t3})
+	  new THREE.MeshFaceMaterial({map:t4})
+	  new THREE.MeshFaceMaterial({map:t5})
 	  	)
 	
 	}
 
 
 	function cube(){
-	geometry=new THREE.Geometry()
-   con=new THREE.TrackballControls(camera)
-	for (var i = 0; i <= 10000; i++) {
-		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
-			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
-		}
-	cube=new THREE.Points(geometry,material[3])
+	geometry=new THREE.CubeGeometry(100,100,100)
+//    con=new THREE.TrackballControls(camera)
+// 	for (var i = 0; i <= 10000; i++) {
+// 		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
+// 			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
+// 		}
+	cube=new THREE.Mesh(geometry,material)
 	scene.add(cube)
 
 	}
