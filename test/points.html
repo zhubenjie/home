@@ -8,19 +8,12 @@
 	<style>
 		*{
 			margin: 0;
-		}	
-		#loadDiv,html,body{
-		width:100%;
-		height:100%;
 		}
-		#loadDiv{
-			background:green;
-			display:block;
-		}
+
+
 	</style>
 </head>
 <body onload=bodyLoad()>
-	<div id='loadDiv'></div>
 <script type="text/javascript">
 
 var renderer,camera,scene,geometry,material,cube,controls
@@ -29,80 +22,78 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 	function init(){
 	  renderer=new THREE.WebGLRenderer()
 	  renderer.setSize(wiW,wiH)
-	  renderer.setClearColor('black')
+	  renderer.setClearColor('#cacaca')
 	  document.body.appendChild(renderer.domElement)
 
 	  scene=new THREE.Scene()
 
 	  camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,10000)
-	  camera.position.z=300
+	  camera.position.z=100
 
-	  var t=new THREE.TextureLoader().load('../img/x1.jpg')
-	
-	 
-	 
-	        con=new THREE.TrackballControls(camera)
+	  con=new THREE.TrackballControls(camera)
 
-	 
-	  material= new THREE.MeshBasicMaterial({map:t})
-
-	
 	}
-
-
 	function cube(){
-	geometry=new THREE.CubeGeometry(100,100,100)
-//    con=new THREE.TrackballControls(camera)
-// 	for (var i = 0; i <= 10000; i++) {
-// 		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
-// 			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
-// 		}
-	cube=new THREE.Mesh(geometry,material)
-	scene.add(cube)
+			 urls=['../skyBox/1.jpg',
+			'../skyBox/2.jpg',
+			'../skyBox/3.jpg',
+			'../skyBox/4.jpg',
+			'../skyBox/5.jpg',
+			'../skyBox/6.jpg']
 
+			txt=new THREE.TextureLoader().load(urls)
+			txt.format=THREE.RGBFormat
+
+		material=new THREE.MeshBasicMaterial({map:txt,envMap:txt})
+		cube=new THREE.Mesh(new THREE.CubeGeometry(60,60,60),
+			material)
+			
 	}
 
 	function animate(){
-
 		con.update()
-
 		renderer.render(scene,camera)
 		requestAnimationFrame(animate)
 	}
 	function bodyLoad(){
-		var ccc=document.getElementById('loadDiv')
-		console.log(ccc)
-		ccc.style.display="none"
 		init()
 		cube()
 		animate()
-		mCanvas()
 	}
 
-	function mCanvas(){
-		var canvas=document.createElement('canvas')
-		canvas.width=32
-		canvas.height=32
-		var c=canvas.getContext('2d')
-		document.body.appendChild(canvas)
-		// c.arc(36,36,35,0,20)
-		// c.fillStyle='green'
-		// c.fill()
-		c.font="50px Georgia";
-		c.shadowBlur=20;
-		c.shadowColor="black";
-		c.fillStyle='green'
-		c.backgroundAlpha=1
-		c.fillText("hello",10,30)
-	
-		return canvas;
-	}
+	// function mCanvas(){
+	// 	var canvas=document.createElement('canvas')
+	// 	canvas.width=32
+	// 	canvas.height=32
+	// 	var c=canvas.getContext('2d')
+	// 	var grd=c.createRadialGradient(16,16,5,16,16,18);
+	// 	grd.addColorStop(0,"white");
+	// 	grd.addColorStop(1,"rgb(34,54,112)");
+	// 	c.fillStyle=grd;
+	// 	c.arc(16,16,16,0,20)
+	// 	c.fill()
+	// 	return canvas;
+	// }
+	// function yCanvas(){
+	// 	var canvas=document.createElement('canvas')
+	// 	canvas.width=32
+	// 	canvas.height=32
+	// 	var c=canvas.getContext('2d')
+	// 	var grd=c.createRadialGradient(16,16,5,16,16,18);
+	// 	grd.addColorStop(0,"red");
+	// 	grd.addColorStop(1,"blue");
+	// 	c.fillStyle=grd;
+	// 	c.arc(16,16,16,0,20)
+	// 	c.fill()
+	// 	return canvas;
+	// }
 
-	function texture(){
-		var map=mCanvas()
-		var texture=new THREE.Texture(map)
-		return texture
-	}
+	// function texture(){
+	// 	var map=mCanvas()
+	// 	var texture=new THREE.Texture(map)
+	// 	return texture
+	// }
+
 
 
 </script>
