@@ -41,7 +41,7 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 	     t3.needsUpdate=true
 	      t4.needsUpdate=true
 	       t5.needsUpdate=true
-	      
+	        con=new THREE.TrackballControls(camera)
 
 	  material=[]
 	  material.push(
@@ -63,14 +63,14 @@ var wiW=window.innerWidth,wiH=window.innerHeight
 // 		geometry.vertices.push(new THREE.Vector3(Math.random()*500-250,Math.random()*200-100,Math.random()*500-250))
 // 			geometry.colors.push(new THREE.Color(Math.random()*0xffffff))
 // 		}
-	cube=new THREE.Mesh(geometry,new THREE.MeshBasicMaterial({color:'red'}))
+	cube=new THREE.Mesh(geometry,material)
 	scene.add(cube)
 
 	}
 
 	function animate(){
 
-// 		con.update()
+		con.update()
 
 		renderer.render(scene,camera)
 		requestAnimationFrame(animate)
