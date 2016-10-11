@@ -347,5 +347,16 @@ function getDoc(){
 	
 </div>
 	<a id='goTop' href='#top'></a>
+	<script type="text/javascript">
+	window.addEventListener('scroll',function(){
+	if(document.body.scrollTop>300){
+	document.getElementById('goTop').style.display='block'
+		
+	}
+	else{
+		document.getElementById('goTop').style.display='none'
+	}
+})
+	</script>
 </body>
 </html>
