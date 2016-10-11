@@ -318,6 +318,25 @@ function getDoc(){
 		
 		</pre>
 	</div>
+	
+	<div><h2>关于JS滚动时间mousewheel </h2>
+	<pre>
+	event.wheelDelta 是一个返回的值，往上是负 下是正数
+	window.addEventListener( 'mousewheel', mousewheel, false );
+	function mousewheel( event ) {
+	//event.preventDefault(); 这个是防止默认，鼠标滚动有效果
+	但页面不变
+		// event.preventDefault();
+		var delta = 0;
+		if ( event.wheelDelta ) { // WebKit / Opera / Explorer 9
+			delta = event.wheelDelta / 40;
+			console.log(event.wheelDelta)
+		} else if ( event.detail ) { // Firefox
+			// delta = - event.detail / 3;
+		}
+	}
+	</pre>
+	</div>
 
 
 </div>
