@@ -300,6 +300,24 @@ function getDoc(){
 		回车即可返回浏览器产品代号，如图，谷歌浏览器的产品代号为"Mozilla"
 	2，查看版本等   navigator.appVersion
 	</div>
+	
+	<div><h2>function name(x) function name({xx:xx}) 区别  </h2>
+	更易读 当参数特特别多的时候用后面一个
+		<pre>
+		var obj={name:null,age:null}
+		function x(obj){
+		this.name=obj.name
+		}
+		var per=new x({name:'zbj'})
+		console.log(per.name) 第一种
+		（如果里面有很多参数，
+		有时候都不知道设置的是哪个，
+		用起来的时候也忘了参数位置摆放，第二种好读
+		，好理解
+		）
+		
+		</pre>
+	</div>
 
 
 </div>
