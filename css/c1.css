@@ -48,6 +48,16 @@ div.main>div{
 	margin-bottom: 30px;
 	border-radius:10px;
 }
+#goTop{
+		display:block;
+		width: 87px;height: 128px;
+		position: fixed;
+		right: 60px;
+		bottom: 60px;
+		display: none;
+		background: url(../image/flag.png);
+	
+}
 div.main>div>p{
 padding: 6px ;
 }
