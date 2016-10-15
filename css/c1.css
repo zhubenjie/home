@@ -15,6 +15,7 @@ body{
 		cursor: url('http://www.zhubenjie.top/image/z1.cur'),auto;
 }
 body>div:first-child{
+	line-height: 50px;
 	width: 78%;
 	margin: 0 auto;
 	height: 50px;
