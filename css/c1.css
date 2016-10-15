@@ -66,6 +66,7 @@ position: absolute;
 top: 0;
 }
 .left ul{
+	border-left: 6px solid #f60;
 	margin-top: 30px;
 	width: 0;
 	padding-left: 30px;
