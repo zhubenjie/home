@@ -109,7 +109,10 @@ top: 0;
 	#goTop{
 		right:0px;
 		bottom: 0px;
-
 	}
+	.left{
+		top:50px;
+	}
+		
 }
 
