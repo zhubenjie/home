@@ -29,10 +29,6 @@ body>div:first-child>a{
 	color:#666;
 	margin-right:12px;
 }
-body>div:first-child>a:first-child:hover{
-	border-top: 5px;
-	border-bottom: 1px solid #f60;
-}
 div.main{
 	width: 78%;
 	overflow: hidden;
