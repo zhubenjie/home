@@ -39,12 +39,12 @@
 			material=[
 			new THREE.MeshBasicMaterial({}),
 			new THREE.MeshNormalMaterial({}),
-			new THREE.PointsMaterial({size:20,transparent:true,depthWrite:false,map:texture})
+			new THREE.PointsMaterial({size:35,transparent:true,depthWrite:false,map:texture})
 			]
 			
 
-			for(var i=0;i<1000;i++){
-				geometry[0].vertices.push(new THREE.Vector3(Math.floor(Math.random()*500-250),Math.floor(Math.random()*100-50),Math.floor(Math.random()*500-250)))
+			for(var i=0;i<3000;i++){
+				geometry[0].vertices.push(new THREE.Vector3(Math.floor(Math.random()*300-150),Math.floor(Math.random()*100-50),Math.floor(Math.random()*500-250)))
 			}
 			
 			cube=new THREE.Points(geometry[0],material[2])
