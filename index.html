@@ -338,7 +338,7 @@ function getDoc(){
 </div>
 <!--main结束-->
 
-<div class='left'>
+<div class='left' id='mobile'>
 	<ul>
 		<li class='spe'>网址导航</li>
 <li><a href="http://techbrood.com/threejs/docs/" target='_blank'>Three.js API</a></li>
@@ -358,8 +358,11 @@ function getDoc(){
 	else{
 		document.getElementById('goTop').style.display='none'
 	}
-})
-	alert('x')
+})	
+	document.geiElementById('mobile').touchstart=function(){
+		alert('x')
+	}
+	
 	</script>
 </body>
 </html>
