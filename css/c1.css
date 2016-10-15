@@ -19,12 +19,7 @@ body>div:first-child{
 	margin: 0 auto;
 	height: 50px;
 }
-body>div:first-child>a:first-child{
-	line-height: 50px;
-	color: #f60;
-	padding-bottom: 3px;
-	border-radius: 30%;
-}
+
 body>div:first-child>a{
 	color:#666;
 	margin-right:12px;
