@@ -7,12 +7,13 @@
 }
 a{
 	color:#f60;
-	cursor: url('http://www.zhubenjie.top/image/z2.cur'),auto;
+	cursor: url('../image/z2.cur'),auto;
 }
 body{
 		
-		background: url('../image/bar1.png');
-		cursor: url('http://www.zhubenjie.top/image/z1.cur'),auto;
+		background: url('../image/bar3.png');
+		cursor: url('../image/z1.cur'),auto;
+		background-attachment: fixed;
 }
 body>div:first-child{
 	line-height: 50px;
@@ -127,4 +128,3 @@ top: 0;
 	}
 		
 }
-
