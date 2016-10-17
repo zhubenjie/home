@@ -351,6 +351,18 @@ function getDoc(){
 	<a id='goTop' href='#top'></a>
 	<script type="text/javascript">
 	window.addEventListener('mousewheel',function(){
+	if(document.body.scrollTop>300){
+	document.getElementById('goTop').style.display='block'
+		
+	}
+	else{
+		document.getElementById('goTop').style.display='none'
+	}
+})	
+	document.getElementById('mobile').touchstart=function(){
+		alert('x')
+	}
+	window.addEventListener('DOMMouseScroll',function(){
 		console.log(document.body.scrollTop)
 	if(document.body.scrollTop>300){
 	document.getElementById('goTop').style.display='block'
@@ -363,6 +375,7 @@ function getDoc(){
 	document.getElementById('mobile').touchstart=function(){
 		alert('x')
 	}
+	
 	
 	</script>
 </body>
