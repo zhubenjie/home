@@ -363,8 +363,8 @@ function getDoc(){
 		alert('x')
 	}
 	window.addEventListener('DOMMouseScroll',function(){
-		console.log(document.body.scrollTop)
-	if(document.body.scrollTop>300){
+		
+	if(document.documentElement.scrollTop>300){
 	document.getElementById('goTop').style.display='block'
 		
 	}
