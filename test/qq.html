@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <title></title>
+  <style>
+  body{
+    margin: 0;
+  }
+  </style>
+</head>
+<body onload="go()">
+<script type="text/javascript" src='../js/three81.js'></script>
+<!-- <script type="text/javascript" src='js/TrackballControls.js'></script> -->
+<script>
+var renderer,camera,scene,obj,matetial,geometry
+var wiW=window.innerWidth,wiH=window.innerHeight
+  
+  function init() {
+    renderer=new THREE.WebGLRenderer()
+    renderer.setSize(wiW,wiH)
+    renderer.setClearColor('black')
+    document.body.appendChild(renderer.domElement)
+    scene=new THREE.Scene()
+
+    camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,6000)
+    camera.position.z=10
+     camera.position.y=2
+
+    // Trackball=new THREE.TrackballControls(camera)
+
+    var map1=new THREE.Texture(canvas1())
+    map1.needsUpdate=true
+    geometry=[
+    new THREE.BoxGeometry(2,2,2),
+    new THREE.Geometry()
+    ]
+
+    var c=new THREE.GridHelper(1000,600)
+    scene.add(c)
+    material=[
+    new THREE.MeshBasicMaterial({map:map1,side:THREE.DoubleSide}),
+    new THREE.MeshNormalMaterial()
+    ]
+
+    obj=new THREE.Mesh(geometry[0],material[0])
+    scene.add(obj)
+
+    for(var i=0;i<15000;i++){
+     geometry[1].vertices.push(new THREE.Vector3(Math.random()*1000-500,Math.random()*500-250,Math.random()*1000-500))
+    }
+    cc=new THREE.Points(geometry[1],new THREE.PointsMaterial({size:1,map:map1,depthWrite:false,transparent:true}))
+    scene.add(cc)
+  }
+
+  function render(){
+    // Trackball.update()
+    
+   camera.up.z=1
+    renderer.render(scene,camera)
+    requestAnimationFrame(render)
+  }
+  function go(){
+    init()
+    render()
+  }
+
+
+var flag=true
+ document.body.onmousedown=function(e){
+  flag=true
+      var x=e.clientX
+      var y=e.clientY
+
+     
+    window.onmousemove=function(event){
+    var movementX = event.movementX || event.mozMovementX || event.webkitMovementX || 0;
+    var movementY = event.movementY || event.mozMovementY || event.webkitMovementY || 0;
+        if(flag){
+          camera.rotation.y+=movementX/1500
+          camera.rotation.x+=movementY/3500
+    }}
+
+    }
+    document.body.onmouseup=function(e){
+    flag=false
+    }
+    window.addEventListener('keydown',function(e){
+      console.log(e.keyCode)
+      switch(e.keyCode){
+      case  87:
+        camera.position.z-=1;
+        break;
+        case  83:
+        camera.position.z+=1;break;
+        case  65:
+        camera.position.x-=1.6;break;
+        case 68:
+        camera.position.x+=1.6;break;
+        case 81:
+        camera.rotation.x=0;
+        camera.rotation.y=0;
+      }
+      
+    })
+
+  function canvas1(){
+    var canvas=document.createElement('canvas')
+    canvas.width=64
+    canvas.height=64
+    var c=canvas.getContext('2d')
+    c.arc(32,32,32,0,20)
+    c.fillStyle='white'
+    c.fill()
+    document.body.appendChild(canvas)
+    return canvas;
+  }
+</script>
+
+
+
+</body>
+</html>
