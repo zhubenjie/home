@@ -346,7 +346,7 @@ function getDoc(){
 <!--main结束-->
 
 <div class='left' id='mobile'>
-	<ul>
+	<ul id='phone'>
 		<li class='spe'>网址导航</li>
 <li><a href="http://techbrood.com/threejs/docs/" target='_blank'>Three.js API</a></li>
 <li><a href='http://www.codeceo.com/article/tag/javascript' target='_blank'>码农网（javascript）</a></li>
@@ -371,7 +371,7 @@ function getDoc(){
 	}
 	window.addEventListener('DOMMouseScroll',function(){
 		
-	if(document.documentElement.scrollTop>300){
+	if(document.documentElement.scrollTop>300){//firefox
 	document.getElementById('goTop').style.display='block'
 		
 	}
@@ -382,7 +382,14 @@ function getDoc(){
 	document.getElementById('mobile').touchstart=function(){
 		alert('x')
 	}
-	
+	var x=1
+	document.getElementById('phone').ontouchstart=function(){
+	if(x==1){this.style.width='200px';x++}
+		else{
+			this.style.width='0';
+			x--
+		}
+	}
 	
 	</script>
 </body>
