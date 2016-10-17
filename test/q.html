@@ -59,6 +59,8 @@
 </head>
 <body>
 <div id="id">www</div>
+	<div id="idd">www</div>
+	<div id="iddd">www</div>
 <span class="a">杰哥1</span>
 <span class="b">杰哥2</span>
 <span class="c">杰哥3</span>
@@ -71,6 +73,17 @@
 	obj.addEventListener('touchstart', function(event) {
  			obj.style.background='#f60'	
 }, false);
+	
+	var objj = document.getElementById('idd');
+
+	objj.ontouchstart=function(){
+ 			objj.style.background='#f60'	}
+	
+	var objj = document.getElementById('iddd');
+
+	objjj.touchstart=function(){
+ 			objjj.style.background='#f60'	}
+
 </script>
 </body>
 </html>
