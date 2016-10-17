@@ -351,6 +351,7 @@ function getDoc(){
 	<a id='goTop' href='#top'></a>
 	<script type="text/javascript">
 	window.addEventListener('mousewheel',function(){
+		console.log(document.body.scrollTop)
 	if(document.body.scrollTop>300){
 	document.getElementById('goTop').style.display='block'
 		
