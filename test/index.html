@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<title></title>
+	<style>
+	*{
+		font-family: '微软雅黑';
+		margin: 0;
+		text-decoration: none;font-size: 16px;
+	}
+	#main{
+		width: 800px;
+		border: 2px solid green;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+	#main>div{
+		position: relative;
+		width: 50%;
+		padding: 12px;
+		float: left;
+		box-sizing: border-box;
+	}
+	a{
+		color: red;
+	}
+	h2{
+		font-size: 1em;
+	}
+	img{
+		width: 100%;
+		display: inline-block;
+	}
+	em{
+		font-style: normal;font-size: 0.6em;
+	}
+	strong{
+		background: #f60;
+	}
+	@media screen and (max-width: 680px){
+		#main{
+			width: 100%;
+		}
+	}
+	</style>
+</head>
+<body>
+<div id='main'>
+<div><img src="../bar3.png" alt="">
+	<h2>xxxxxxxxxxx</h2>
+	<strong>包邮<em>10元优惠券</em></strong>
+	<h3>卷后26.00</h3>
+	<a href="">领卷购买</a>
+
+</div>
+
+<div><img src="../bar3.png" alt="">
+	<h2>xxxxxxxxxxx</h2>
+	<strong>包邮<em>10元优惠券</em></strong>
+	<h3>卷后26.00</h3>
+	<a href="#" class='xx'>领卷购买</a>
+
+</div>
+
+<div><img src="../bar3.png" alt="">
+	<h2>xxxxxxxxxxx</h2>
+	<strong>包邮<em>10元优惠券</em></strong>
+	<h3>卷后26.00</h3>
+	<a href="">领卷购买</a>
+
+</div>
+
+
+
+</div>
+
+<script>
+</script>
+<script src='../js/jquery-3.1.0.min.js'></script>
+<script>
+$('.xx').click(function(){
+	alert('x')
+})
+</script>
+</body>
+</html>
