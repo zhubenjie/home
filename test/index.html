@@ -3,12 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1" /> 
-	<title>好优品</title>
+	<title></title>
 	<style>
 	*{
 		font-family: '微软雅黑';
 		margin: 0;
 		text-decoration: none;font-size: 16px;
+	}
+	body{
+		background:rgb(243,243,243);
 	}
 	#main{
 		width: 800px;
@@ -18,16 +21,24 @@
 	}
 	#main>div{
 		position: relative;
-		width: 50%;
+		width: 49%;
+		margin-right: 2%;
+		margin-bottom: 6px;
+		background: white;
 		padding: 12px;
 		float: left;
 		box-sizing: border-box;
 	}
+	#main>div:nth-child(even){
+	margin-right:0 ;
+	}
 	a{
-		color: red;
+		color: red;font-size: 0.7em;
 	}
 	h2{
-		font-size: 1em;
+		font-size: 0.8em;overflow: hidden;
+		margin-bottom: 6px;
+		margin-top: 3px;
 	}
 	img{
 		width: 100%;
@@ -37,7 +48,19 @@
 		font-style: normal;font-size: 0.6em;
 	}
 	strong{
-		background: #f60;
+		background:#b7f5a6;
+		color: rgb(111,111,111);
+		padding: 3px;margin-bottom: 3px;
+		display: inline-block;
+	}
+	span{
+		font-size: 0.6em;
+		border:  1px solid red;
+		padding: 3px;
+	}
+	h3{
+		margin-top: 2px;margin-bottom: 2px;font-size: 0.8em;
+		color: #f76c7f;
 	}
 	@media screen and (max-width: 680px){
 		#main{
@@ -48,41 +71,29 @@
 </head>
 <body>
 <div id='main'>
-<div><img src="../image/bar3.png" alt="">
+<div><img src="../img/1.jpg" alt="">
+	<h2>康夫吹风家用大功率</h2>
+	<strong>包邮<em>10元优惠券</em></strong>
+	<h3>卷后 &nbsp;&nbsp;<a href="">30.00</a></h3>
+	<span>复制￥AAPIQhRG￥ 并打开手机淘宝</span>
+
+</div>
+
+<div><img src="../img/2.jpg" alt="">
 	<h2>xxxxxxxxxxx</h2>
 	<strong>包邮<em>10元优惠券</em></strong>
-	<h3>卷后26.00</h3>
-	<a href="">领卷购买</a>
+	<h3>卷后&nbsp;&nbsp;<a href="">26.00</a></h3>
+	<span>复制￥AAPIQhRG￥ 并打开手机淘宝</span>
 
 </div>
 
-<div><img src="../image/bar3.png" alt="">
-	<h2>xxxxxxxxxxx</h2>
+<div><img src="../img/4.jpg" alt="">
+	<h2>北极绒保暖内衣</h2>
 	<strong>包邮<em>10元优惠券</em></strong>
-	<h3>卷后26.00</h3>
-	<a href="#" class='xx'>领卷购买</a>
-
+	<h3>卷后&nbsp;&nbsp;<a href="">26.00</a></h3>
+	<span>复制￥AAPIQhRG￥ 并打开手机淘宝</span>
 </div>
 
-<div><img src="../image/bar3.png" alt="">
-	<h2>xxxxxxxxxxx</h2>
-	<strong>包邮<em>10元优惠券</em></strong>
-	<h3>卷后26.00</h3>
-	<a href="">领卷购买</a>
-
 </div>
-
-
-
-</div>
-
-<script>
-</script>
-<script src='../js/jquery-3.1.0.min.js'></script>
-<script>
-$('.xx').click(function(){
-	alert('x')
-})
-</script>
 </body>
 </html>
