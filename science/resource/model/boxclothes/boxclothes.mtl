@@ -1,0 +1,70 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# 创建的文件:19.10.2016 17:03:23
+
+newmtl wardrobe
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0540 0.0540 0.0540
+	Ke 0.0000 0.0000 0.0000
+	map_Ka wardrobe.jpg
+	map_Kd wardrobe.jpg
+
+newmtl clothes_rail
+	Ns 63.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3373 0.3373 0.3373
+	Kd 0.3373 0.3373 0.3373
+	Ks 0.5580 0.5580 0.5580
+	Ke 0.0000 0.0000 0.0000
+
+newmtl clothes_rack
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka TexturesCom_WoodFine0003_seamless_S.jpg
+	map_Kd TexturesCom_WoodFine0003_seamless_S.jpg
+
+newmtl female_clothes01
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka female clothes01.png
+	map_Kd female clothes01.png
+
+newmtl male_clothes01
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka male clothes01.png
+	map_Kd male clothes01.png

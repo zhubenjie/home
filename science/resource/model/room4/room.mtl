@@ -1,0 +1,320 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# 创建的文件:19.10.2016 17:08:14
+
+newmtl girder03
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka girder03.jpg
+	map_Kd girder03.jpg
+
+newmtl girder04
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka girder04.jpg
+	map_Kd girder04.jpg
+
+newmtl girder02
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka girder02 .jpg
+	map_Kd girder02 .jpg
+
+newmtl girder05
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0270 0.0270 0.0270
+	Ke 0.0000 0.0000 0.0000
+	map_Ka TexturesCom_WoodFine0003_seamless_S.jpg
+	map_Kd TexturesCom_WoodFine0003_seamless_S.jpg
+	map_bump TexturesCom_WoodFine0003_seamless_S.jpg
+	bump TexturesCom_WoodFine0003_seamless_S.jpg
+
+newmtl girder01
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka girder01.jpg
+	map_Kd girder01.jpg
+
+newmtl cabinet
+	Ns 15.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.2824 0.1529 0.1529
+	Kd 0.2824 0.1529 0.1529
+	Ks 0.0900 0.0900 0.0900
+	Ke 0.0000 0.0000 0.0000
+	map_Ka carbinet.jpg
+	map_Kd carbinet.jpg
+
+newmtl door_curtain01
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka door curtain01.jpg
+	map_Kd door curtain01.jpg
+
+newmtl wall
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9373 0.6824 0.3490
+	Kd 0.9373 0.6824 0.3490
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka wall.jpg
+	map_Kd wall.jpg
+
+newmtl bed
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0540 0.0540 0.0540
+	Ke 0.0000 0.0000 0.0000
+	map_Ka bed.jpg
+	map_Kd bed.jpg
+
+newmtl carpet
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka Redocn_2012070615061110.jpg
+	map_Kd Redocn_2012070615061110.jpg
+
+newmtl tangka
+	Ns 65.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.1440 0.1440 0.1440
+	Ke 0.0000 0.0000 0.0000
+	map_Ka thangka.jpg
+	map_Kd thangka.jpg
+
+newmtl corner_line
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka corner line.jpg
+	map_Kd corner line.jpg
+
+newmtl floor
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5608 0.4118 0.2235
+	Kd 0.5608 0.4118 0.2235
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl ceiling
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka ceiling.jpg
+	map_Kd ceiling.jpg
+
+newmtl door_curtain02
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka door curtain02.jpg
+	map_Kd door curtain02.jpg
+
+newmtl curtain
+	Ns 10.0000
+	Ni 1.5000
+	d 0.8000
+	Tr 0.2000
+	Tf 0.8000 0.8000 0.8000 
+	illum 2
+	Ka 1.0000 0.5765 0.0235
+	Kd 1.0000 0.5765 0.0235
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+
+newmtl drawer
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9490 0.5922 0.2706
+	Kd 0.9490 0.5922 0.2706
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka drawer01.jpg
+	map_Kd drawer01.jpg
+
+newmtl wardrobe
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0540 0.0540 0.0540
+	Ke 0.0000 0.0000 0.0000
+	map_Ka wardrobe.jpg
+	map_Kd wardrobe.jpg
+
+newmtl clothes_rail
+	Ns 63.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.3373 0.3373 0.3373
+	Kd 0.3373 0.3373 0.3373
+	Ks 0.5580 0.5580 0.5580
+	Ke 0.0000 0.0000 0.0000
+
+newmtl mattress
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka mattress.jpg
+	map_Kd mattress.jpg
+
+newmtl censer
+	Ns 51.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.7110 0.7110 0.7110
+	Ke 0.0000 0.0000 0.0000
+	map_Ka censer.jpg
+	map_Kd censer.jpg
+
+newmtl Material__54
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.1961 0.1961 0.1961
+	map_Ka sky.jpg
+	map_Kd sky.jpg
+
+newmtl window
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5882 0.5882 0.5882
+	Kd 0.5882 0.5882 0.5882
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka TexturesCom_WoodFine0003_seamless_S.jpg
+	map_Kd TexturesCom_WoodFine0003_seamless_S.jpg
