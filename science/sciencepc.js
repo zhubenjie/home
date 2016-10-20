@@ -99,7 +99,7 @@ window.onload=function(){
              loader3.load( 'resource/model/boxclothes/boxclothes.obj', 'resource/model/boxclothes/boxclothes.mtl', function ( object ) {
                  object.position.y = - 120;
                  object.material.transparent=true;
-                 object.material.depthWrite:false;
+                 object.material.depthWrite=false;
                  scene.add( object );
                 }, onProgress4, onError4 );
 
