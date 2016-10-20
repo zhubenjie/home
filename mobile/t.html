@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>qwer</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<style>
+	*{
+		margin: 0;
+	}
+	div{
+		height: 100vh;
+		width: 100vW;
+		background: rgba(123,63,78,0.3);
+	}
 
+	</style>
+</head>
+<body>
+<div id='q'></div>
+
+<script type="text/javascript" src='../js/jquery-3.1.0.min.js'>
+</script>
+<script>
+document.getElementById('q').onclick=function(){
+	alert('x')
+}
+$('#q').click(function(){
+	alert('y')
+})
+
+document.addEventListener('touchstart',touch, false);  
+    document.addEventListener('touchmove',touch, false);  
+    document.addEventListener('touchend',touch, false);  
+
+
+    function touch (event){  
+        var event = event || window.event;  
+        switch(event.type){  
+            case "touchstart":  
+            alert('touchstart')
+                break;  
+            case "touchend":  
+              alert('touchmove  clientx'+event.clientX+" pagex "+event.pageX+"   screenX"+event.screenX)
+                break;  
+            case "touchmove":  
+              alert('touchmove')
+                event.preventDefault();  
+                break;  
+        }  
+    }
+</script>
+
+
+</body>
+</html>
