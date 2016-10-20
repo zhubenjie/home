@@ -1,54 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>qwer</title>
+	<title></title>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<style>
 	*{
 		margin: 0;
 	}
-	div{
-		height: 100vh;
-		width: 100vW;
-		background: rgba(123,63,78,0.3);
+	body{
+		overflow-x: hidden;;
+		height: 2000px;
 	}
-	#qq{background: rgba(11,39,241,0.3);
-		}
+.a,.c{
+    width: 0;
+    height: 0;
+    border-top: 20vh solid transparent;
+    border-right: 100vw solid #6bbf20;
+    border-bottom: 20vh solid transparent;
+	transition: all 0.5s;
+}   
+.c{
+	margin-top: -20vh;
+	 border-right: 100vw solid rgba(24,12,19,0.2);
+}
+.b,.d {
+    width: 0;
+    height: 0;
+    border-top: 20vh  solid transparent;
+    border-left: 100vw solid rgba(24,69,166,0.8);
+    border-bottom: 20vh solid transparent;
+    text-indent: 30px;
+	transition: all 0.5s;
+	margin-top: -20vh;
+} 
+.d{
+	margin-top: -20vh;
+	 border-left: 100vw solid rgba(124,19,16,0.8);
+}
+span{
+	position: relative;top: 1000px;
+
+}
+span>div:nth-child(odd){
+	position: relative;left: 100vw;
+}
+span>div:nth-child(even){
+	position: relative;left: -100vw;
+}
+
 	</style>
+
 </head>
 <body>
-<div id='q'></div>
-	<div id='qq'></div>
+<span>
+<div class="a"></div>  
+<div class="b"></div>
+<div class="c"></div>
+<div class="d"></div>
+       </span>                    
+
 
 <script type="text/javascript" src='../js/jquery-3.1.0.min.js'>
 </script>
 <script>
-document.getElementById('q').onclick=function(){
-	alert('x')
-}
-$('#q').click(function(){
-	alert('y')
+$(document).scroll(function(){
+	
+	if($(document).scrollTop()> ($('span div').offset().top+100) ){
+		$('span div').animate({left:'0'},90)
+	
+	}
+
 })
+	
 
-    document.addEventListener('touchmove',touch, false);  
-
-
-    function touch (event){  
-        var event = event || window.event;  
-        switch(event.type){  
-            case "touchstart":  
-            alert('touchstart')
-                break;  
-            case "touchend":  
-            
-                break;  
-            case "touchmove":  
-              alert('touchmove')
-	        alert('touchmove  clientx'+event.clientX+" pagex "+event.pageX+"   screenX"+event.screenX)
-
-                break;  
-        }  
-    }
 </script>
 
 
