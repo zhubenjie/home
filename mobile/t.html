@@ -28,9 +28,7 @@ $('#q').click(function(){
 	alert('y')
 })
 
-document.addEventListener('touchstart',touch, false);  
     document.addEventListener('touchmove',touch, false);  
-    document.addEventListener('touchend',touch, false);  
 
 
     function touch (event){  
@@ -40,10 +38,11 @@ document.addEventListener('touchstart',touch, false);
             alert('touchstart')
                 break;  
             case "touchend":  
-              alert('touchmove  clientx'+event.clientX+" pagex "+event.pageX+"   screenX"+event.screenX)
+            
                 break;  
             case "touchmove":  
               alert('touchmove')
+	        alert('touchmove  clientx'+event.clientX+" pagex "+event.pageX+"   screenX"+event.screenX)
                 event.preventDefault();  
                 break;  
         }  
