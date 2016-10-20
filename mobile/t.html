@@ -43,7 +43,7 @@ span{
 
 }
 span>div:nth-child(odd){
-	position: relative;left: 100vw;
+	visibility：hidden;
 }
 span>div:nth-child(even){
 	position: relative;left: -100vw;
@@ -67,7 +67,8 @@ span>div:nth-child(even){
 $(document).scroll(function(){
 	
 	if($(document).scrollTop()> ($('span div').offset().top+100) ){
-		$('span div').animate({left:'0'},90)
+		$('span div:nth-child(even)').animate({left:'0'},90)
+		$('span div:nth-child(odd)').show(100)
 	
 	}
 
