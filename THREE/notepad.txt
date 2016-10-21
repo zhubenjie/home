@@ -46,11 +46,6 @@ antialias : true  这个抗锯齿
 要注意 
 renderer.setSize(x,y)
 renderer.setClearColor(0xffff00,0.5)//后面是透明度
-        
-===================关于 定义 xyz 轴 ===============
-var ax=new THREE.AxisHelper(20)
-  ax.position.z=30
-  scene.add(ax)
 
 =====================关于 基本材质===================
 http://www.ituring.com.cn/article/51315
@@ -81,3 +76,8 @@ depthWrite:false (简单的讲， 前后重叠的时候，有时候会看到纹�
 http://techbrood.com/threejs/docs/#参考手册/材料(Materials)/材料(Material)
 材料链接
 
+======================关于 物体移动 旋转==============================
+有position.set  position.x=num   rotation.x=num     
+ translateX(num)  translateZ(num)                rotateX(num)
+前面和后面的区别是  前者都是以世界坐标轴 来设置的
+后者 以自己来设置    前者 是对象属性，后者方法
