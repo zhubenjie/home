@@ -130,3 +130,7 @@ function mouseMove(e){
   function mouseUp(){
     clickFlag=false
   }
+===========================纹理重复======
+q.needsUpdate=true
+   q.wrapS=q.wrapT=THREE.RepeatWrapping
+   q.repeat.set(6,6)
