@@ -24,7 +24,7 @@ var clickFlag=true
     document.body.appendChild(renderer.domElement)
     scene=new THREE.Scene()
     scene.fog=new THREE.Fog('#cacaca',10,2000)
-    camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,5000)
+    camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,2000)
     camera.position.z=50
      camera.position.y=10
     // Trackball=new THREE.FirstPersonControls(camera)
@@ -35,9 +35,9 @@ var clickFlag=true
     new THREE.Geometry(),
     new THREE.BufferGeometry()
     ]
-    var c=new THREE.GridHelper(1000,600)
-    c.name='q'
-    scene.add(c)
+//     var c=new THREE.GridHelper(1000,600)
+//     c.name='q'
+//     scene.add(c)
     //material
     material=[
     new THREE.MeshBasicMaterial({map:map1,side:THREE.DoubleSide}),
