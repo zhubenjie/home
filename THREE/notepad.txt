@@ -81,3 +81,52 @@ http://techbrood.com/threejs/docs/#参考手册/材料(Materials)/材料(Materia
  translateX(num)  translateZ(num)                rotateX(num)
 前面和后面的区别是  前者都是以世界坐标轴 来设置的
 后者 以自己来设置    前者 是对象属性，后者方法
+
+===========================封装 好的 control 事件======
+var clickFlag=true
+window.addEventListener('keydown',mouseMove,false)
+window.addEventListener('mousedown',mouseDown,false)
+window.addEventListener('mouseup',mouseUp,false)
+function mouseMove(e){
+    console.log(e.keyCode)
+    //W  87   S83  A 65  D68
+    //
+    switch(e.keyCode){
+      case 87:
+       case 38:
+      camera.translateZ(-1.6);
+      break;
+      case 83:
+      case 40:
+      camera.translateZ(1.6);
+      break;
+      case 65:
+      case 37:
+      camera.translateX(-1.6);
+      break;
+      case 68:
+      case 39:
+      camera.translateX(1.6);
+      break;
+      case 32:
+      camera.translateY(1.6)
+      break;
+      case 90:
+      camera.translateY(-1.6);
+      break;
+    }
+  }
+  function mouseDown(e){
+    clickFlag=true
+    var eX=e.clientX
+     var eY=e.clientY
+      window.onmousemove=function(e){
+          if(clickFlag){
+            camera.rotateY(-(e.clientX-eX)/20000)
+             camera.rotateX(-(e.clientY-eY)/200000)
+      }
+    }
+  }
+  function mouseUp(){
+    clickFlag=false
+  }
