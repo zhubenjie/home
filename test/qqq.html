@@ -50,10 +50,12 @@ var clickFlag=true
    cube.rotation.y=0.6
    cube.position.set(6,1,2)
    scene.add(cube)
-   var q=new THREE.TextureLoader().load('http://www.zhubenjie.top/img/bar3.png')
+   var q=new THREE.TextureLoader().load('http://www.zhubenjie.top/img/cao.jpg')
    q.needsUpdate=true
+   q.wrapS=q.wrapT=THREE.RepeatWrapping
+   q.repeat.set(600,600)
 
-    var ccc=new THREE.Mesh(new THREE.PlaneGeometry(100,100),new THREE.MeshBasicMaterial({map:q}))
+    var ccc=new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),new THREE.MeshBasicMaterial({map:q}))
     ccc.rotation.x=-90*Math.PI/180
     scene.add(ccc)
 // console.log(scene.children[0].name)
