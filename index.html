@@ -355,6 +355,15 @@ function getDoc(){
 可能值: true - 事件句柄在捕获阶段执行  ;false- false- 默认。事件句柄在冒泡阶段执行
 冒泡 从下往上  捕获反之
 	</div>
+	
+	<div><h2>关于window.open</h2>
+		{
+	var code = document.getElementById(element).innerHTML;
+	console.log(code+"  ww")
+	var win= window.open();
+		win.document.write(code);//。。
+}
+	</div>
 
 
 </div>
