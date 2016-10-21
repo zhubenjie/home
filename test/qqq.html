@@ -50,10 +50,10 @@ var clickFlag=true
    cube.rotation.y=0.6
    cube.position.set(6,1,2)
    scene.add(cube)
-   var q=new THREE.TextureLoader().load('http://www.zhubenjie.top/img/cao.jpg')
+   var q=new THREE.TextureLoader().load('http://www.zhubenjie.top/image/Wood.jpg')
    q.needsUpdate=true
    q.wrapS=q.wrapT=THREE.RepeatWrapping
-   q.repeat.set(200,200)
+   q.repeat.set(150,150)
 
     var ccc=new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),new THREE.MeshBasicMaterial({map:q}))
     ccc.rotation.x=-90*Math.PI/180
