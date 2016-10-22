@@ -1,0 +1,181 @@
+http://tmall1111.im20.com.cn/
+
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>尽情尽兴，尽在双11</title>
+    <meta name="description" content=""/>
+    <!--<meta name="viewport" content="width=640, target-densitydpi=device-dpi, user-scalable=no"/>-->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <meta id="WV.Meta.Share.Title" value="双11VR邀请函"/>
+    <meta id="WV.Meta.Share.Image" value="http://tmall1111.im20.com.cn/impublic/images/share/weibo.jpg"/>
+    <meta id="WV.Meta.Share.Text" value="穿越宇宙向你发来的一封双11邀请函"/>
+    <meta id="WV.Meta.Share.Url"
+          value="http://tmall1111.im20.com.cn/"/>
+
+    <style>
+        html, body {
+            background: #000000;
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: "Helvetica Neue", Arial;
+        }
+
+        #main {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+    </style>
+
+    <script>
+        function parseUA() {
+            var u = navigator.userAgent;
+            var u2 = navigator.userAgent.toLowerCase();
+            return { //移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                iosv: u.substr(u.indexOf('iPhone OS') + 9, 3),
+                weixin: u2.match(/MicroMessenger/i) == "micromessenger",
+                ali: u.indexOf('AliApp') > -1,
+            };
+        }
+        var ua = parseUA();
+
+        if (!ua.mobile) {
+            location.href = './pc.html';
+        }
+
+        var isActive = true;
+        if(ua.ali){
+            document.addEventListener('WV.Event.APP.Background', function(){
+                isActive = false;
+            });
+
+            document.addEventListener('WV.Event.APP.Active', function(){
+                isActive = true;
+            });
+
+            document.addEventListener('WV.Event.APP.Lock', function(){
+                isActive = false;
+            });
+
+        }
+
+    </script>
+
+
+    <script src="./impublic/js/libs/three.min.js"></script>
+    <script src="./impublic/js/libs/zepto.min.js"></script>
+    <!--<script src="./impublic/js/libs/stats.min.js"></script>-->
+
+</head>
+<body>
+
+<div id="main"></div>
+
+<audio id="bgm" src="./impublic/sound/bgm.mp3" loop preload="auto"></audio>
+
+
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    var amObj = {
+        title: "穿越宇宙向你发来的一封双11邀请函",
+        desc: "双11VR邀请函",
+        link: "http://tmall1111.im20.com.cn/",
+        imgUrl: "http://tmall1111.im20.com.cn/wechat.jpg",
+        success: function () {
+            if (typeof(ga) == 'function') ga('send', 'event', 'Share', 'Share', 'share_friends');
+        },
+        cancel: function () {
+
+        }
+    };
+
+    var tlObj = {
+        title: "穿越宇宙向你发来的一封双11邀请函",
+        desc: "穿越宇宙向你发来的一封双11邀请函",
+        link: "http://tmall1111.im20.com.cn/",
+        imgUrl: "http://tmall1111.im20.com.cn/wechat.jpg",
+        success: function () {
+            if (typeof(ga) == 'function') ga('send', 'event', 'Share', 'Share', 'share_moments');
+        },
+        cancel: function () {
+
+        }
+    };
+
+    wx.ready(function () {
+        wx.onMenuShareAppMessage(amObj);
+        wx.onMenuShareTimeline(tlObj);
+    });
+
+    wx.error(function (res) {
+//        alert("验证未成功");
+    });
+
+    function getwxshareconfig() {
+        var config = {};
+        $.ajax({
+            url: "http://wx.im20.com.cn/WxApi/getSignPackage",
+            type: "GET",
+            dataType: 'jsonp',
+            jsonp: 'imCallback',
+            success: function (json) {
+                config.debug = false;
+                config.appId = json.data.appId;
+                config.timestamp = json.data.timestamp;
+                config.nonceStr = json.data.nonceStr;
+                config.signature = json.data.signature;
+                config.rawString = json.data.rawString;
+                config.jsApiList = ['onMenuShareAppMessage', 'onMenuShareTimeline', 'hideOptionMenu'];
+                wx.config(config);
+            }
+        });
+    }
+
+    if (ua.weixin) {
+        getwxshareconfig();
+    }
+
+</script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-79368027-7', 'auto');
+    ga('send', 'pageview');
+
+</script>
+
+<script src="./impublic/built/main.js?v=12"></script>
+
+</body>
+</html>
