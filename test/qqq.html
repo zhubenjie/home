@@ -19,7 +19,7 @@ var renderer,camera,scene,obj,matetial,geometry
 var wiW=window.innerWidth,wiH=window.innerHeight
 var clickFlag=true
   function init() {
-    renderer=new THREE.CanvasRenderer({alpha:true})
+    renderer=new THREE.WebGLRenderer({alpha:true})
     renderer.setSize(wiW,wiH)
     document.body.appendChild(renderer.domElement)
     scene=new THREE.Scene()
