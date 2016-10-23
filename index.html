@@ -393,7 +393,7 @@ function getDoc(){
 </div>
 	<a id='goTop' href='#top'></a>
 	<script type="text/javascript">
-	window.addEventListener('mousewheel',function(){
+	window.addEventListener('scroll',function(){
 	if(document.body.scrollTop>300){
 	document.getElementById('goTop').style.display='block'
 		
@@ -405,16 +405,7 @@ function getDoc(){
 	document.getElementById('mobile').touchstart=function(){
 		alert('x')
 	}
-	window.addEventListener('DOMMouseScroll',function(){
-		
-	if(document.documentElement.scrollTop>300){//firefox
-	document.getElementById('goTop').style.display='block'
-		
-	}
-	else{
-		document.getElementById('goTop').style.display='none'
-	}
-})	
+	
 	document.getElementById('mobile').touchstart=function(){
 		alert('x')
 	}
