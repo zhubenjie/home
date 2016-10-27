@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name='viewport' content="width=device-width, initial-scale=1" >
+	<style>
+	body{
+		margin: 0;
+		font-size: 16px;
+	}
+	div{
+		position: relative;
+		left: 45%;
+		font-size: 1.2em;
+	}
+	</style>
+</head>
+<body>
+<div id='d'>qqq</div>
+<script type="text/javascript">
+var c;
+window.addEventListener('touchstart',function(e){
+	c=e.touches[0].clientY
+})
+window.addEventListener('touchmove',function(e){
+	document.getElementById('d').innerHTML=e.touches[0].clientY-c
+})
+
+</script>
+</body>
+</html>
