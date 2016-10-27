@@ -6,6 +6,7 @@
 <!-- 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"> -->
 	<style>
 	body{
+		height:1500px;
 		margin: 0;
 		font-size: 16px;
 	}
@@ -24,6 +25,7 @@ window.addEventListener('touchstart',function(e){
 	c=e.touches[0].clientY
 })
 window.addEventListener('touchmove',function(e){
+	e.preventDefault();
 	document.getElementById('d').innerHTML=e.touches[0].clientY-c
 })
  window.addEventListener("deviceorientation", function(event) {
