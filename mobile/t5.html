@@ -92,7 +92,7 @@ var clickFlag=true
    for(var i=0;i<300;i++){
       var cu=new THREE.Mesh(geometry[0],material[1])
       cu.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*500-250)
-      scene.add(cube)
+      scene.add(cu)
    }
     var qiu= new THREE.SphereGeometry(60,50,50)
      ppi=new THREE.Points(qiu,new THREE.PointsMaterial({size:1,color:'rgb(31,29,240)'}))
@@ -198,13 +198,13 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.position.z+=((e.touches[0].clientY-ttc)/100)
-  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(((e.touches[0].clientY-ttc)/100))
+  camera.position.z+=((e.touches[0].clientY-ttc)/35)
+  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(((e.touches[0].clientY-ttc)/35))
 })
 
  window.addEventListener("deviceorientation", function(event) {
-camera.position.x=((event.gamma/30))
-camera.position.y=((event.beta/30))
+camera.position.x=((event.gamma/12))
+camera.position.y=((event.beta/12))
    document.getElementById('q').innerHTML=camera.position.x
   });
 
