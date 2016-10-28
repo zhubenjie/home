@@ -206,7 +206,6 @@ window.addEventListener('touchmove',function(e){
   e.preventDefault();
   camera.position.z+=((e.touches[0].clientY-ttc)/35)
   ts=(e.touches[0].clientY-ttc)/35
-  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(((e.touches[0].clientY-ttc)/35))
 })
  window.addEventListener("deviceorientation", function(event) {
 camera.position.x=((event.gamma/2))
@@ -216,8 +215,9 @@ camera.position.y=((event.beta/2))
 
 
 window.addEventListener('touchend',function(e){
-  alert(ts)
+
 speedFlag=true
+    document.getElementById('w').innerHTML=speedFlag
 })
 
 </script>
