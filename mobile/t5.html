@@ -191,13 +191,13 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.translateZ(-(e.touches[0].clientY-ttc/5000))
+  camera.position.z+=(-(e.touches[0].clientY-ttc/50000))
 })
 
-//  window.addEventListener("deviceorientation", function(event) {
-// camera.position.x=(-(event.gamma/100))
-camera.position.y=(-(event.beta/100))
-//   });
+ window.addEventListener("deviceorientation", function(event) {
+camera.position.x=(-(event.gamma/200))
+camera.position.y=(-(event.beta/200))
+  });
 
 </script>
 
