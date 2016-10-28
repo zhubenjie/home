@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <title></title>
+  <style>
+  body{
+    margin: 0;
+  }
+  </style>
+</head>
+<body onload="go()">
+<script type="text/javascript" src='../js/three81.js'></script>
+<!-- <script type="text/javascript" src='js/FirstPersonControls.js'></script> -->
+<!-- <script src='js/TrackballControls.js'></script> -->
+<script>
+var renderer,camera,scene,obj,matetial,geometry
+var wiW=window.innerWidth,wiH=window.innerHeight
+var clickFlag=true
+  function init() {
+    renderer=new THREE.WebGLRenderer({})
+    renderer.setSize(wiW,wiH)
+    document.body.appendChild(renderer.domElement)
+    scene=new THREE.Scene()
+    scene.fog=new THREE.Fog('black',10,2000)
+    camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,5000)
+    camera.position.z=20
+     camera.position.y=10
+     // camera.lookAt({x:10,y:10,z:20})
+    // Trackball=new THREE.FirstPersonControls(camera)
+    var map1=new THREE.Texture(canvas1())
+    map1.needsUpdate=true
+    geometry=[
+    new THREE.BoxGeometry(2,2,2),
+    new THREE.Geometry(),
+    new THREE.BufferGeometry()
+    ]
+    var c=new THREE.GridHelper(2000,200)
+    c.name='q'
+    scene.add(c)
+    //material
+    material=[
+    new THREE.MeshBasicMaterial({side:THREE.DoubleSide}),
+    new THREE.MeshNormalMaterial(),
+    new THREE.MeshBasicMaterial({vertexColors:THREE.VertexColors,side:THREE.DoubleSide}),
+    new THREE.MeshBasicMaterial({color:'green',wireframe:true})
+    ]
+    var z=new THREE.Object3D()
+    console.log(z.position.set())
+     // ccc=new THREE.TrackballControls(camera)
+   cube=new THREE.Mesh(new THREE.BoxGeometry(6,6,6),material[3])
+   cube.rotation.y=0.6
+   cube.position.set(6,1,2)
+   // scene.add(cube)
+   // var q=new THREE.TextureLoader().load('http://www.zhubenjie.top/img/bar3.png')
+   // q.needsUpdate=true
+   
+   // var bar=new THREE.TextureLoader().load('b1.png')
+   // bar.needsUpdate=true
+
+   lizgeom=new THREE.Geometry()
+   for(var i=0;i<10000;i++){
+    lizgeom.vertices.push(new THREE.Vector3(Math.random()*1300-750,Math.random()*1300-750,Math.random()*1300-750 ))
+   }
+   lizhi=new THREE.Points(lizgeom,new THREE.PointsMaterial({}))
+   scene.add(lizhi)
+   // console.log()
+   cc2 = new THREE.Mesh(geometry[0],material[3])
+   cc1 = new THREE.Mesh(geometry[0],material[3])
+   scene.add(cc2)
+   cc2.position.set(0,10,10)
+   scene.add(cc1)
+   cc1.position.set(2,10,20)
+
+   scene.add(cc1)
+   var cc=canvas1()
+   q=new THREE.Texture(cc)
+   q.needsUpdate=true
+   q.wrapS=q.wrapT=THREE.RepeatWrapping
+   q.repeat.set(6,6)
+    var ccc=new THREE.Mesh(new THREE.PlaneGeometry(100,100),new THREE.MeshBasicMaterial({}))
+    // ccc.rotation.x=-90*Math.PI/180
+    // scene.add(ccc)
+// console.log(scene.children[0].name)
+
+    var qiu= new THREE.SphereGeometry(60,50,50)
+     ppi=new THREE.Points(qiu,new THREE.PointsMaterial({size:1,color:'rgb(31,29,240)'}))
+    ppi.position.set(-60,-160,-300)
+    scene.add(ppi)
+    // ppi.add(camera)
+    // console.log(lizhi.geometry)
+window.addEventListener('resize',windowResize,false)
+// window.addEventListener('keydown',mouseMove,false)
+// window.addEventListener('mousedown',mouseDown,false)
+// window.addEventListener('mouseup',mouseUp,false)
+}
+// var zz=0.1
+  function render(){
+    // for(var i=0;i<lizhi.geometry.vertices.length;i++){
+    
+    //       lizhi.geometry.vertices[i].y=Math.cos(zz)+10
+    //         lizhi.geometry.vertices[i].x+=Math.sin(zz)
+    //         lizhi.geometry.vertices[i].z+=Math.sin(zz)
+    //   lizhi.geometry.verticesNeedUpdate=true
+    //   zz+=0.00002
+
+    // }
+    // ppi.rotateY(0.005)
+    // ppi.rotateX(0.005)
+    // camera.lookAt(ppi.position)
+    // ppi.translateX(0.05)
+    // camera.position.z+=-0.9
+    // cube.translateX(0.05)
+    renderer.render(scene,camera)
+    requestAnimationFrame(render)
+  }
+  function go(){
+    init()
+    render()
+  }
+  function canvas1(){
+    var canvas=document.createElement('canvas')
+    canvas.width=64
+    canvas.height=64
+    var c=canvas.getContext('2d')
+    c.arc(32,32,32,0,20)
+    c.fillStyle='#f60'
+    c.fill()
+    return canvas;
+  }
+  function windowResize(){
+    wiW=window.innerWidth
+    wiH=window.innerHeight
+    renderer.setSize(wiW,wiH)
+    camera.aspect=wiW/wiH
+    camera.updateProjectionMatrix()
+  }
+
+  function mouseMove(e){
+    // console.log(e.keyCode && true)
+    //W  87   S83  A 65  D68
+    if(e.keyCode == 87 ){
+      console.log('yes')
+    }
+    switch(e.keyCode){
+      case 87:
+       case 38:
+      camera.translateZ(-1.6);
+      break;
+      case 83:
+      case 40:
+      camera.translateZ(1.6);
+      break;
+      case 65:
+      case 37:
+      camera.translateX(-1.6);
+      break;
+      case 68:
+      case 39:
+      camera.translateX(1.6);
+      break;
+      case 32:
+      camera.translateY(1.6)
+      break;
+      case 90:
+      camera.translateY(-1.6);
+      break;
+    }
+  }
+  function mouseDown(e){
+    clickFlag=true
+    var eX=e.clientX
+     var eY=e.clientY
+      window.onmousemove=function(e){
+          if(clickFlag){
+            camera.rotateY(-(e.clientX-eX)/20000)
+      }
+    }
+  }
+  function mouseUp(){
+    clickFlag=false
+  }
+
+var ttc
+window.addEventListener('touchstart',function(e){
+  ttc=e.touches[0].clientY
+})
+window.addEventListener('touchmove',function(e){
+  e.preventDefault();
+  camera.translateZ(-(e.touches[0].clientY-ttc/2000))
+})
+ window.addEventListener("deviceorientation", function(event) {
+camera.translateX(-(event.gamma/300))
+camera.translateY(-(event.beta/300))
+  });
+
+</script>
+
+</body>
+</html>
