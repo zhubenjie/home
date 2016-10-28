@@ -194,13 +194,13 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.position.z=(-(e.touches[0].clientY-ttc/1000))
+  camera.position.z+=(-(e.touches[0].clientY-ttc/1000000))
   document.getElementById('w').innerHTML=camera.position.z
 })
 
  window.addEventListener("deviceorientation", function(event) {
-camera.position.x=(-(event.gamma/100))
-camera.position.y=(-(event.beta/100))
+camera.position.x=((event.gamma/30))
+camera.position.y=((event.beta/30))
    document.getElementById('q').innerHTML=camera.position.x
   });
 
