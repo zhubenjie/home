@@ -185,14 +185,15 @@ window.addEventListener('resize',windowResize,false)
 var ttc
 window.addEventListener('touchstart',function(e){
   ttc=e.touches[0].clientY
+  camera.translateZ(0)
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.translateZ(-(e.touches[0].clientY-ttc/2000))
+  camera.translateZ(-(e.touches[0].clientY-ttc/1000))
 })
  window.addEventListener("deviceorientation", function(event) {
-camera.translateX(-(event.gamma/300))
-camera.translateY(-(event.beta/300))
+camera.position.x=(-(event.gamma/100))
+camera.position.y=(-(event.beta/100))
   });
 
 </script>
