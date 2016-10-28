@@ -7,6 +7,7 @@
   <style>
   body{
     margin: 0;
+    background:#f60;
   }
   </style>
 </head>
@@ -21,9 +22,10 @@ var clickFlag=true
   function init() {
     renderer=new THREE.WebGLRenderer({})
     renderer.setSize(wiW,wiH)
+    renderer.setClearColor('black')
     document.body.appendChild(renderer.domElement)
     scene=new THREE.Scene()
-    scene.fog=new THREE.Fog('black',10,2000)
+    // scene.fog=new THREE.Fog('black',10,2000)
     camera=new THREE.PerspectiveCamera(45,wiW/wiH,0.1,5000)
     camera.position.z=20
      camera.position.y=10
@@ -36,7 +38,7 @@ var clickFlag=true
     new THREE.Geometry(),
     new THREE.BufferGeometry()
     ]
-    var c=new THREE.GridHelper(2000,200)
+    var c=new THREE.GridHelper(2000,600)
     c.name='q'
     scene.add(c)
     //material
@@ -189,12 +191,13 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.translateZ(-(e.touches[0].clientY-ttc/1000))
+  camera.translateZ(-(e.touches[0].clientY-ttc/5000))
 })
- window.addEventListener("deviceorientation", function(event) {
-camera.position.x=(-(event.gamma/100))
+
+//  window.addEventListener("deviceorientation", function(event) {
+// camera.position.x=(-(event.gamma/100))
 camera.position.y=(-(event.beta/100))
-  });
+//   });
 
 </script>
 
