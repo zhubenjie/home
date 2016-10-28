@@ -190,12 +190,11 @@ window.addEventListener('resize',windowResize,false)
 var ttc
 window.addEventListener('touchstart',function(e){
   ttc=e.touches[0].clientY
-  camera.translateZ(0)
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.position.z+=(-(e.touches[0].clientY-ttc/1000000))
-  document.getElementById('w').innerHTML=camera.position.z
+  camera.position.z+=((e.touches[0].clientY-ttc/1000000))
+  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(e.touches[0].clientY-ttc/1000000)
 })
 
  window.addEventListener("deviceorientation", function(event) {
