@@ -69,7 +69,7 @@ var clickFlag=true
     lizgeom.vertices.push(new THREE.Vector3(Math.random()*1300-750,Math.random()*1300-750,Math.random()*1300-750 ))
    }
    lizhi=new THREE.Points(lizgeom,new THREE.PointsMaterial({}))
-   scene.add(lizhi)
+//    scene.add(lizhi)
    // console.log()
    cc2 = new THREE.Mesh(geometry[0],material[3])
    cc1 = new THREE.Mesh(geometry[0],material[3])
@@ -89,6 +89,11 @@ var clickFlag=true
     // scene.add(ccc)
 // console.log(scene.children[0].name)
 
+   for(var i=0;i<300;i++){
+      var cu=new THREE.Mesh(geometry[0],material[1])
+      cu.position.set(Math.random()*500-250,Math.random()*500-250,Math.random()*500-250)
+      scene.add(cube)
+   }
     var qiu= new THREE.SphereGeometry(60,50,50)
      ppi=new THREE.Points(qiu,new THREE.PointsMaterial({size:1,color:'rgb(31,29,240)'}))
     ppi.position.set(-60,-160,-300)
@@ -193,8 +198,8 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.position.z+=((e.touches[0].clientY-ttc)/500)
-  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(((e.touches[0].clientY-ttc)/500))
+  camera.position.z+=((e.touches[0].clientY-ttc)/100)
+  document.getElementById('w').innerHTML=Math.floor(camera.position.z)+"  "+Math.floor(((e.touches[0].clientY-ttc)/100))
 })
 
  window.addEventListener("deviceorientation", function(event) {
