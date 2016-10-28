@@ -22,6 +22,7 @@
 var renderer,camera,scene,obj,matetial,geometry
 var wiW=window.innerWidth,wiH=window.innerHeight
 var clickFlag=true
+var speedFlag=false
   function init() {
     renderer=new THREE.WebGLRenderer({})
     renderer.setSize(wiW,wiH)
@@ -107,6 +108,9 @@ window.addEventListener('resize',windowResize,false)
 }
 // var zz=0.1
   function render(){
+    if(speedFlag){
+      camera.translateZ(ts/2)
+    }
     // for(var i=0;i<lizhi.geometry.vertices.length;i++){
     
     //       lizhi.geometry.vertices[i].y=Math.cos(zz)+10
@@ -196,7 +200,7 @@ window.addEventListener('resize',windowResize,false)
 var ttc,ts
 window.addEventListener('touchstart',function(e){
   ttc=e.touches[0].clientY
-   camera.translateZ(0)
+   speedFlag=false
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
@@ -213,7 +217,7 @@ camera.position.y=((event.beta/2))
 
 window.addEventListener('touchend',function(e){
   alert(ts)
-  camera.translateZ(ts/1.5)
+speedFlag=true
 })
 
 </script>
