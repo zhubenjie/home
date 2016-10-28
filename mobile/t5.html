@@ -12,7 +12,9 @@
   </style>
 </head>
 <body onload="go()">
-  <span id='q'></span><span id='w'></span>
+  <span id='q'></span>
+  <br>
+  <span id='w'></span>
 <script type="text/javascript" src='../js/three81.js'></script>
 <!-- <script type="text/javascript" src='js/FirstPersonControls.js'></script> -->
 <!-- <script src='js/TrackballControls.js'></script> -->
@@ -192,13 +194,13 @@ window.addEventListener('touchstart',function(e){
 })
 window.addEventListener('touchmove',function(e){
   e.preventDefault();
-  camera.position.z+=(-(e.touches[0].clientY-ttc/100000))
+  camera.position.z=(-(e.touches[0].clientY-ttc/1000))
   document.getElementById('w').innerHTML=camera.position.z
 })
 
  window.addEventListener("deviceorientation", function(event) {
-camera.position.x=(-(event.gamma/200))
-camera.position.y=(-(event.beta/200))
+camera.position.x=(-(event.gamma/100))
+camera.position.y=(-(event.beta/100))
    document.getElementById('q').innerHTML=camera.position.x
   });
 
