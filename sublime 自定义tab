@@ -1,0 +1,76 @@
+在 sublime 工具下 最后面新代码生成 直接把下面的复制 粘贴 ok css里面不能直接 tab  要创建个新文件，zbj1 + tab  再保存为。css文件
+html
+<snippet>
+     <content>
+ <![CDATA[
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="zbj" >
+	<meta name="Description" content="zbj" >
+	<link rel="stylesheet" type="text/css" href="">
+	<title></title>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+
+
+<script type="text/javascript"></script>
+</body>
+</html>
+]]>
+     </content>
+     <!-- 下面是 名字 按tab 上面出来 -->
+     <tabTrigger>zbj</tabTrigger>
+</snippet>
+
+<snippet>
+     <content>
+ <![CDATA[
+/* zhubenjie.github.io/home/index   2016.11.22 
+zbj html  zbj1 css
+
+ */
+html{
+	font-size: 16px;
+}
+body{
+	font-family:'Microsoft YaHei';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	outline: none;
+	border: none;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+	/*默认 italic*/
+}
+
+@media screen and (max-width:500px ){
+	
+}
+]]>
+     </content>
+     <!-- 下面是 名字 按tab 上面出来 -->
+     <tabTrigger>zbj1</tabTrigger>
+</snippet>
+
+
+http://www.bluesdream.com/blog/sublime-text-snippets-function.html  参考
