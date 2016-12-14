@@ -1,0 +1,25 @@
+
+        var test=false;
+        function is_weixin(){
+            var ua = navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i)=="micromessenger") {
+                test=true
+            }
+        }
+          is_weixin();/微信
+        var u = navigator.userAgent;
+       var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端 
+       //boolean
+
+
+//        if(isAndroid){
+//            xx.setAttribute('href',"http://pfile2.laiyouxi.com/updategame/apk/com.zoxun.shanxkdd.xxbf_c8_v1.0.8x_10000_20161208_v2.apk")
+//            xx.setAttribute('src','/WeChat/images/android_down_btn.png')
+//        }
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        //boolean
+        if(isiOS){
+            a.setAttribute('href',"https://itunes.apple.com/us/app/shan-xi-kou-dian-dian-te-se/id1182663184?mt=8")
+            i.setAttribute('src','/WeChat/images/ios_down_btn.png')
+        }
+       
