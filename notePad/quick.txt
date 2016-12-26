@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="" >
+	<meta name="Description" content="" >
+	<meta name="format-detection" content="telephone=no" /> 
+	<link rel="stylesheet" type="text/css" href="">
+		
+	<title></title>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+
+
+
+<script type="text/javascript"></script>
+</body>
+</html>
+
+html{
+	font-size: 16px;
+      -webkit-user-select: none;  这个是禁止选中
+}
+body{
+	font-family:'Microsoft YaHei';
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	outline: none;
+	border: none;
+	vertical-align: middle;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+i,em{
+	font-style: normal;
+	/*默认 italic*/
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+input[type="button"], input[type="submit"], input[type="reset"] {
+  -webkit-appearance: none;
+}
+//ios 用的 自定义样式
+@media screen and (max-width:500px ){
+	
+}
