@@ -1,0 +1,22 @@
+
+https://www.w3.org/html/ig/zh/wiki/DeviceOrientation%E4%BA%8B%E4%BB%B6%E8%A7%84%E8%8C%83
+DeviceOrientation事件规范
+
+---------------------------------------手机设备事件------------------------------------------
+
+deviceorientation  手机以自身 自转
+
+window.addEventListener('deviceorientation',function(e){
+div.innerHTML="alpha= "+Math.round(e.alpha)+"   beta=  "+Math.round(e.beta)+"     gamma= "+Math.round(e.gamma)
+		})
+
+
+
+devicemotion 类似 加速的 那种
+
+window.addEventListener('devicemotion',function(e){
+
+//rotationRate  加速的  类似摇一摇
+
+sp.innerHTML=Math.round(e.rotationRate.alpha)+"    "+Math.round(e.rotationRate.beta)+"   "+Math.round(e.rotationRate.gamma)
+		})
