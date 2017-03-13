@@ -1,4 +1,32 @@
+----------------------------------------------------常用--------------------------------------------------
+function _IsIOS() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/iPhone\sOS/i) == "iphone os") {
+        return true;
+    } else {
+        return false;
+    }
+}
+// ios  or  android
+function _IsAndroid() {
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/Android/i) == "android") {
+        return true;
+    } else {
+        return false;
+    }
+}
+// weixin
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
 
+//微信
 
 ------------------------------------------------- 判断大全-------------------------------------------------
 
