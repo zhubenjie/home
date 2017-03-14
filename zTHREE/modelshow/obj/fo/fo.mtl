@@ -1,0 +1,12 @@
+# Blender MTL File: 'None'
+# Material Count: 1
+
+newmtl defaultMat
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.376364 0.376364 0.376364
+Ks 0.136364 0.136364 0.136364
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd obj/fo/fo.jpg

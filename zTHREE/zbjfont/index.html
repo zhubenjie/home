@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="" >
+	<meta name="Description" content="" >
+	<meta name="format-detection" content="telephone=no" /> 
+	<link rel="stylesheet" type="text/css" href="">
+	<link rel="shortcut icon" href="https://zhubenjie.github.io/home/image/favicon.ico">
+		
+	<title>字体展示</title>
+
+	<style>
+		*{
+			margin: 0
+		}
+	</style>
+</head>
+
+<body>
+
+
+<script src='t81m.js'></script>
+<script src='objm.js'></script>
+<script src='mtlm.js'></script>
+<script src='orbitControl.js'></script>
+<script >
+var render,camera,scene
+function init(){
+	
+
+var wiW=window.innerWidth
+var wiH=window.innerHeight-3
+
+	scene=new THREE.Scene()
+
+	render=new THREE.WebGLRenderer({antialias:'true'})
+	render.setSize(wiW,wiH)
+	render.setClearColor('#cacaca')
+	render.setPixelRatio(window.devicePixelRatio)
+	document.body.appendChild(render.domElement)
+
+	camera = new THREE.PerspectiveCamera( 45, wiW/wiH, 1, 3000 );
+	camera.position.z=10
+
+	var Amlight=new THREE.AmbientLight('white')
+	scene.add(Amlight)
+
+
+	var Dilight=new THREE.DirectionalLight('red',0.5)
+	Dilight.position.set(1,0,1)
+	scene.add(Dilight)
+
+	var cont=new THREE.OrbitControls(camera)
+	var cube=new THREE.Mesh()
+	 console.log(cube)
+	
+	var mtl=new THREE.MTLLoader()
+	mtl.load('zbj.mtl',function(e1){
+		var	obj=new THREE.OBJLoader()
+		obj.setMaterials(e1)
+		obj.load('zbj.obj',function(e){
+			scene.add(e)
+		})
+
+	})
+	loop()
+
+	function loop(){
+		cont.update()
+		render.render(scene,camera)
+		requestAnimationFrame(loop)
+	}
+
+	window.addEventListener('mousemove',function(e){
+
+	})
+
+
+}
+init()
+</script>
+</body>
+</html>

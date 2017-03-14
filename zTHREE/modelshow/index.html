@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="" >
+	<meta name="Description" content="" >
+	<meta name="format-detection" content="telephone=no" /> 
+	<link rel="stylesheet" type="text/css" href="">
+	<title>佛像展示</title>
+	<style>
+		*{
+			margin: 0
+		}
+		body{
+			background: rgb(26,26,26);
+		}
+		.sx{
+			width: 0;height: 0;overflow:hidden;
+			vertical-align: top;
+		}
+		.canvas{
+			position: absolute;left: 0;
+			top: 0
+		}
+		 .logo{
+		 	width: 50%;
+		 	position: absolute;
+		 	z-index: 2;
+		 	color:rgb(230,230,230);
+		 	left: 0;
+		 	top: 41%;
+		 	right: 0;
+		 	font-weight: bold;
+		 	margin: 0 auto;
+		 	text-align: center;
+		 }
+		 .logo>div{
+		 	height: 3px;
+		 	border-radius: 1px;
+		 	width: 0;
+		 	background: #f60;
+		 	margin-top: 6px;
+		 }
+		 .baiduFx{
+		 	bottom: 5%;
+		 	background: rgb(233,236,236);
+		 	border-radius: 5px;
+		 	padding: 3px 8px;
+		 	position: absolute;
+		 	width: 230px;
+		 	left: -255px;
+		 	display: none;
+		 }
+		 .fxbt{
+		 	moz-user-select: -moz-none; -moz-user-select: none; -o-user-select:none; -khtml-user-select:none; -webkit-user-select:none; -ms-user-select:none; user-select:none;
+		 	cursor: pointer;
+		 	text-align: center;
+		 	line-height: 50px;
+		 	font-weight: bold;
+		 	color: white;
+		 	position: absolute;
+		 	right: 5%;
+		 	bottom: 5%;
+		 	width: 50px;height: 50px;
+		 	background: rgba(200,200,200,0.8);
+		 	border-radius: 50%;
+		 	border: 5px solid rgba(220,220,220,0.6);
+		 	position: absolute;
+		 	z-index: 3;
+		 }
+		 @media screen and (max-width: 550px){
+		 	.logo{
+		 		width: 80%;
+		 	}
+		 }
+	</style>
+<script src='js/t81m.js'></script>
+<script src='js/mtlm.js'></script>
+<script src='js/objm.js'></script>
+<script src='js/Detector.js'></script>
+<script>
+	if ( ! Detector.webgl )  {
+	alert('您的浏览器不支持webgl，建议更换更快更先进的浏览器，如chrome 或火狐')
+}
+</script>
+</head>
+<body>
+<img src="img/sx.jpg" alt="" class="sx">
+<div class="logo">
+	<img src="img/logo.png" alt="">
+	<p>北京金戈多传媒有限公司</p>
+	<div class='loaddd'></div>
+</div>
+<div class="canvas"></div>
+<script  src='js/core.js'></script>
+<div class="fxbt">
+分享
+<div class="baiduFx">
+	<div class="bdsharebuttonbox"><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_isohu" data-cmd="isohu" title="分享到我的搜狐"></a><a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a></div>
+</div>
+</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["copy","qzone","tsina","weixin","sqq","isohu"],"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+
+var fxbt=document.querySelector('.fxbt')
+var bdfx=document.querySelector('.baiduFx')
+fxbt.onclick=function(){
+	//  none 没效果  属性显示 ''
+	 if(bdfx.style.display=='' || bdfx.style.display=='none'){
+	 	bdfx.style.display='block'
+	 }
+	 else{
+	 	bdfx.style.display='none'
+	 }
+}
+</script>
+
+</body>
+</html>

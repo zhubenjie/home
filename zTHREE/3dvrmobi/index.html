@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="" >
+	<meta name="Description" content="" >
+	<meta name="format-detection" content="telephone=no" /> 
+	<link rel="stylesheet" type="text/css" href="">
+		
+	<title></title>
+
+	<style>
+	body{
+		margin: 0;
+	}
+
+	</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+<!-- 
+//平台、设备和操作系统
+var system ={
+win : false,
+mac : false,
+xll : false
+};
+//检测平台
+var p = navigator.platform;
+system.win = p.indexOf("Win") == 0;
+system.mac = p.indexOf("Mac") == 0;
+system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+//跳转语句，如果是手机访问就自动跳转到wap.baidu.com页面
+if(system.win||system.mac||system.xll){
+ 	 console.log('pc')
+}else{
+ console.log('mobi')
+}
+-->
+</script>
+
+<script src='t81m.js'></script>
+<script src='DeviceOrientationControls.js'></script>
+<script src='orb.js'></script>
+<script >
+
+	var scene,camera,render
+	var wiW=window.innerWidth
+	var wiH=window.innerHeight-3
+	var div=document.querySelector('div')
+	var sp=document.querySelector('span')
+	init()
+	function init() {
+		render=new THREE.WebGLRenderer({antialias:true})
+		render.setClearColor('#cacaca')
+		document.body.appendChild(render.domElement)
+		render.setSize(wiW,wiH)
+		render.setPixelRatio(window.devicePixelRatio);
+		scene=new THREE.Scene()
+
+		camera=new THREE.PerspectiveCamera(45,wiW/wiH,1,3000)
+		camera.position.z=3
+		camera.position.y=3
+
+		var cube=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshBasicMaterial({color:'green'}))
+		cube.position.z=-6
+		scene.add(cube)
+
+		var grd=new THREE.GridHelper(20,20)
+		scene.add(grd)
+		// var effect = new THREE.StereoEffect(render);
+		// scene.add(camera)
+
+		var controls = new THREE.OrbitControls(camera);
+		 controls.target.set(
+        camera.position.x,
+        camera.position.y,
+        camera.position.z - 0.15
+    );
+    controls.noZoom = true;
+    // 禁止缩放
+    controls.enableRotate=false
+    // 禁止 旋转
+
+
+		loop()
+		function loop(){
+			controls.update();
+			render.render(scene,camera)
+			requestAnimationFrame(loop)
+		}
+// ---------------------------------event--------------------------------
+
+
+    	window.addEventListener('deviceorientation', setOrientationControls, true);
+    	
+
+// ----------------------------------fn------------------------------------
+
+		function setOrientationControls(e){
+        if (e.alpha) {
+            controls = new THREE.DeviceOrientationControls(camera, true);
+            controls.connect();
+            controls.update();
+            window.removeEventListener('deviceorientation', setOrientationControls, true);
+    		}
+        }
+        //  device control  for 
+        //  http://test.nie.163.com/test_html/test/test/test_vr_20161130/
+        
+	
+}
+
+</script>
+</body>
+</html>
