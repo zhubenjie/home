@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+	<meta name="Keywords" content="" >
+	<meta name="Description" content="" >
+	<meta name="format-detection" content="telephone=no" /> 
+	<link rel="stylesheet" type="text/css" href="">
+		
+	<title></title>
+
+	<style>
+	*{
+			margin: 0
+		}
+		body{
+			background: url(../img/t.jpg);
+		}
+	</style>
+</head>
+
+<body>
+
+
+<script src='../js/t81m.js'></script>
+<script >
+var render,camera,scene
+init()
+function init(){
+	
+
+var wiW=window.innerWidth
+var wiH=window.innerHeight-3
+
+	scene=new THREE.Scene()
+
+	render=new THREE.WebGLRenderer({antialias:'true',alpha:true})
+	// render.alpha=true
+	// 没有这个属性  只能在里面设置
+	 console.log(render.alpha)
+	render.setSize(wiW,wiH)
+	render.setPixelRatio(window.devicePixelRatio)
+	document.body.appendChild(render.domElement)
+
+	camera = new THREE.PerspectiveCamera( 45, wiW/wiH, 1, 3000 );
+	camera.position.z=10
+	loop()
+
+	function loop(){
+		render.render(scene,camera)
+		requestAnimationFrame(loop)
+	}
+}
+</script>
+</body>
+</html>
