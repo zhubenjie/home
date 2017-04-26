@@ -1,0 +1,34 @@
+
+2017.4.26
+
+法线贴图问题 
+mtl 里面带法线贴图 ，加载图片  出来的全是小点点 
+
+解决办法 ， mtl 里面不能带   法线要手动加载进去
+
+代码：
+var teu=new THREE.Texture()
+
+	var imgg=new THREE.ImageLoader().load('xx.jpg',function(e){
+
+			teu.image=e
+	teu.needsUpdate=true
+	})
+
+var mtl=new THREE.MTLLoader()
+	mtl.load('xx.obj',function(e1){
+		var	obj=new THREE.OBJLoader()
+		obj.setMaterials(e1)
+		obj.load('xx.obj',function(e){
+			scene.add(e)
+					e.traverse( function ( child ) {
+						if ( child instanceof THREE.Mesh ) {
+										
+							child.material.normalMap=teu
+							}
+						} );
+
+
+		})
+
+	})
