@@ -1,0 +1,7 @@
+结束语后面  加  ;  
+ 如 
+ console.log(1)
+ //如果 这上面不加分号 下面直接报错
+ (function(){
+  consol.log(1)
+ })()
